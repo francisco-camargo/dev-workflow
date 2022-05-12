@@ -1,1 +1,75 @@
-# learn_ubuntu
+# Learn to Develop with Ubuntu
+
+## Goal
+
+I want to learn to use Ubuntu to develop. Will do this both via the Windows Subsystem for Linux (WSL)  on one machine and from a machine with Ubuntu installed as the OS.
+
+I also want to learn to use VSCode in conjuction with using Ubuntu.
+
+## Clone repo
+
+`clone https://github.com/francisco-camargo/learn_ubuntu.git`
+
+
+## Getting Started
+
+Where is this repo in my local? I can get to it from the Ubuntu terminal using
+
+`$ cd learn_ubuntu`
+
+or
+
+`$ cd /home/francisco/learn_ubuntu`
+
+In Windows I can find it as 
+
+`\\wsl$\Ubuntu-20.04\home\francisco\learn_ubuntu`
+
+### Install WSL
+[Check](https://www.zdnet.com/article/windows-10-tip-find-out-if-your-pc-can-run-hyper-v/) if your PC can run Hyper-V
+[Guide](https://www.omgubuntu.co.uk/how-to-install-wsl2-on-windows-10)
+
+### Install Ubuntu in WSL
+Go to the Mircrosoft Store and install Ubuntu 20.04 (or whatever version you want).
+
+### Install Python
+We do want to install python within WSL: [guide](https://computingforgeeks.com/how-to-install-python-on-ubuntu-linux-system/)
+
+```
+$ python3.10 --version
+Python 3.10.X
+```
+
+give an [alias](https://askubuntu.com/questions/320996/how-to-make-python-program-command-execute-python-3?newreg=a3ae2d11b44641baba3120c0f6ca6111)
+
+`$ alias python = python3.10`
+
+### Use GitHub
+Want to have this repo in GitHub and use a personal access token (PAT). I have set up a PAT in GitHub. It seems that in order to make use of it I need to clone the repo using HTTPS.
+
+Will create one PAT per computer.
+
+### Use git
+However, I did need to set my GitHub information:
+```
+$ git config --global user.name "name"
+$ git config --global user.email "email@email.com"
+```
+
+then to talk to the remote repo, use a PAT as the password. I don't want to have to enter my username and password (PAT) everytime, so follow this [guide](https://www.freecodecamp.org/news/how-to-fix-git-always-asking-for-user-credentials/) or maybe [this](https://www.techiediaries.com/git/stop-git-always-asking-for-username-and-password-when-using-https/) guide.
+
+```
+git config --global credential.helper store
+git config --global credential.helper cache
+```
+
+### Install VSCode
+[Guide](https://code.visualstudio.com/docs/remote/wsl)
+Needed to have installed VSCode in the Windows side, not sure if I did that
+In the Ubuntu terminal, go to the folder in which we want to work and start-up VSCode:
+
+`$ code .` 
+
+There is some first-time automatic set-up but once VSCode is open, at the bottom left I see that in green it says `WSL: Ubuntu-20.04`
+
+Alternatively: To have VSCode looking at Ubuntu go to the bottom left and click on the green box then in the pop-up at the top select `New WSL Window using Distro...`. Now when we open a terminal we should see that it is a bash terminal and we have access to the python we just installed 
