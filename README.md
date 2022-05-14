@@ -8,7 +8,7 @@ I also want to learn to use VSCode in conjuction with using Ubuntu.
 
 ## Clone repo
 
-`clone https://github.com/francisco-camargo/learn_ubuntu.git`
+`$ git clone https://github.com/francisco-camargo/learn_ubuntu.git`
 
 
 ## Getting Started
@@ -59,14 +59,13 @@ $ git config --global user.email "email@email.com"
 Here I will use the GitHub "noreply" email which can be found in personal settings on GitHub, [guide](https://stackoverflow.com/a/51097104/9205210). For the password use a PAT. I don't want to have to enter my username and password (PAT) everytime, so follow this [guide](https://www.freecodecamp.org/news/how-to-fix-git-always-asking-for-user-credentials/) or maybe [this](https://www.techiediaries.com/git/stop-git-always-asking-for-username-and-password-when-using-https/) guide and essentially run the following commands:
 
 ```
-git config --global credential.helper store
-git config --global credential.helper cache
+$ git config --global credential.helper store
+$ git config --global credential.helper cache
 ```
 
-### Install VSCode
+### Install VSCode for WSL
 [Guide](https://code.visualstudio.com/docs/remote/wsl)
-Needed to have installed VSCode in the Windows side, not sure if I did that
-In the Ubuntu terminal, go to the folder in which we want to work and start-up VSCode:
+Needed to have installed VSCode in the Windows side. In the Ubuntu terminal, go to the folder in which we want to work and start-up VSCode:
 
 `$ code .` 
 
