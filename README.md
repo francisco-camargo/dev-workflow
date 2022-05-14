@@ -65,7 +65,7 @@ $ git config --global credential.helper store
 $ git config --global credential.helper cache
 ```
 #### git squash
-Guide to using `rebase` to squash commits together.
+[Guide](https://www.git-tower.com/learn/git/faq/git-squash) to using `rebase` to squash commits together. Also describes how to "squash and merge" during pull requests.
 
 ### Install VSCode for WSL
 [Guide](https://code.visualstudio.com/docs/remote/wsl)
