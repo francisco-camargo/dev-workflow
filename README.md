@@ -67,6 +67,8 @@ $ git config --global credential.helper cache
 #### git squash
 [Guide](https://www.git-tower.com/learn/git/faq/git-squash) to using `rebase` to squash commits together. Also describes how to "squash and merge" during pull requests.
 
+Trying to just use "squash and merge" for pull requests.
+
 ### Install VSCode for WSL
 [Guide](https://code.visualstudio.com/docs/remote/wsl)
 Needed to have installed VSCode in the Windows side. In the Ubuntu terminal, go to the folder in which we want to work and start-up VSCode:
