@@ -77,3 +77,4 @@ Alternatively: To have VSCode looking at Ubuntu go to the bottom left and click 
 
 * Vim
 * Python
+* PyLance?
