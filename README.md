@@ -32,6 +32,15 @@ In Windows I can find it as
 ### Install Ubuntu in WSL
 Go to the Mircrosoft Store and install Ubuntu 20.04 (or whatever version you want).
 
+### Install Vim
+
+Commands to install Vim to be used within the terminal
+
+```
+$ sudo apt update
+$ sudo apt install vim
+```
+
 ### Install Python
 We do want to install python within WSL: [guide](https://computingforgeeks.com/how-to-install-python-on-ubuntu-linux-system/)
 
@@ -68,6 +77,8 @@ $ git config --global credential.helper cache
 [Guide](https://www.git-tower.com/learn/git/faq/git-squash) to using `rebase` to squash commits together. Also describes how to "squash and merge" during pull requests.
 
 Trying to just use "squash and merge" for pull requests. Note sure how commit messeges with appear.
+
+dev commit 2
 
 ### Install VSCode for WSL
 [Guide](https://code.visualstudio.com/docs/remote/wsl)
