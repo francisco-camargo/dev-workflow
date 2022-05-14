@@ -49,7 +49,9 @@ Want to have this repo in GitHub and use a personal access token (PAT). I have s
 
 Will create one PAT per computer.
 
-### Use git
+### Using git
+
+#### git credentials
 However, I did need to set my GitHub information:
 ```
 $ git config --global user.name "name"
@@ -62,6 +64,8 @@ Here I will use the GitHub "noreply" email which can be found in personal settin
 $ git config --global credential.helper store
 $ git config --global credential.helper cache
 ```
+#### git squash
+Guide to using `rebase` to squash commits together.
 
 ### Install VSCode for WSL
 [Guide](https://code.visualstudio.com/docs/remote/wsl)
