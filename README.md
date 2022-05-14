@@ -76,3 +76,4 @@ Alternatively: To have VSCode looking at Ubuntu go to the bottom left and click 
 ### VSCode Extensions
 
 * Vim
+* Python
