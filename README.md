@@ -1,4 +1,4 @@
-# Learn to Develop with Ubuntu
+# Learn to Develop on Ubuntu
 
 ## Goal
 
@@ -10,8 +10,7 @@ I also want to learn to use VSCode in conjuction with using Ubuntu.
 
 `$ git clone https://github.com/francisco-camargo/learn_ubuntu.git`
 
-
-## Getting Started
+## Install WSL
 
 Where is this repo in my local? I can get to it from the Ubuntu terminal using
 
@@ -32,6 +31,22 @@ In Windows I can find it as
 ### Install Ubuntu in WSL
 Go to the Mircrosoft Store and install Ubuntu 20.04 (or whatever version you want).
 
+## Terminal Shortcuts
+* New terminal tab: `ctrl`+`shift`+`t`
+* New terminal window: `ctrl`+`alt`+`t`
+* Switch to a specific tab: `alt` + # of tab
+* Close current tab (or window): `ctrl`+`shift`+`w`
+* Copy: `ctrl`+`shift`+`c`
+* Paste: `ctrl`+`shift`+`v`
+* But how to I highlight text? What to do the equivalent of the Windows `ctrl`+`shift`+[arrow]
+
+## Ubuntu Shell commands
+* Make a directory: `$ mkdir [directoryname]`
+* New file: `$ touch [filename.extension]`
+* Check contents of file (?): `$ cat [filepath]`
+
+## Vim
+
 ### Install Vim
 
 Commands to install Vim to be used within the terminal
@@ -41,17 +56,38 @@ $ sudo apt update
 $ sudo apt install vim
 ```
 
-### Install Python
-We do want to install python within WSL: [guide](https://computingforgeeks.com/how-to-install-python-on-ubuntu-linux-system/)
+### Vim Commands
 
-```
-$ python3.10 --version
-Python 3.10.X
-```
+#### Normal Move
 
-give an [alias](https://askubuntu.com/questions/320996/how-to-make-python-program-command-execute-python-3?newreg=a3ae2d11b44641baba3120c0f6ca6111)
+* Get into command mode: `esc`
+* Insert mode: `i`
+* Move up: `k`
+* Move down: `j`
+* Move left: `h`
+* Move right: `l`
 
-`$ alias python = python3.10`
+* New line below and enter insert mode: `o`
+* New line above and enter insert mode: `O`
+
+[Guide](https://phoenixnap.com/kb/cut-copy-paste-vim)
+* Copy
+    * Everything to the right: `y$`
+    * (Almost) everything to the left: `y^`
+    * Entire line: `yy`
+    * Word with its trailing whitespace: `yaw`
+    * Word without its trailing whitespace: `yiw`
+    * `yfx`
+    * `ytx`
+* Past
+    * `p`
+    * `P`
+* Cut
+    * Current line: `dd`
+    * Everything to the right: `d$`
+
+#### Visual Mode
+[Guide](https://phoenixnap.com/kb/cut-copy-paste-vim)
 
 ### Use GitHub
 Want to have this repo in GitHub and use a personal access token (PAT). I have set up a PAT in GitHub. It seems that in order to make use of it I need to clone the repo using HTTPS.
@@ -72,6 +108,23 @@ Here I will use the GitHub "noreply" email which can be found in personal settin
 ```
 $ git config --global credential.helper store
 $ git config --global credential.helper cache
+```
+
+#### git diff
+View of unstaged changes
+```
+$ git diff [filepath]
+```
+
+View staged changes
+```
+$ git diff --cached [filepath]
+```
+
+#### Change commit messege
+To change the messege of the last commit
+```
+$ git commit --amend
 ```
 
 #### git squash
@@ -102,3 +155,15 @@ Alternatively: To have VSCode looking at Ubuntu go to the bottom left and click 
 * Vim
 * Python
 * PyLance?
+
+### Install Python
+We do want to install python within WSL: [guide](https://computingforgeeks.com/how-to-install-python-on-ubuntu-linux-system/)
+
+```
+$ python3.10 --version
+Python 3.10.X
+```
+
+give an [alias](https://askubuntu.com/questions/320996/how-to-make-python-program-command-execute-python-3?newreg=a3ae2d11b44641baba3120c0f6ca6111)
+
+`$ alias python = python3.10`
