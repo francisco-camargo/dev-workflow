@@ -36,6 +36,9 @@ Go to the Mircrosoft Store and install Ubuntu 20.04 (or whatever version you wan
 * New terminal window: `ctrl`+`alt`+`t`
 * Switch to a specific tab: `alt` + # of tab
 * Close current tab (or window): `ctrl`+`shift`+`w`
+* Copy: `ctrl`+`shift`+`c`
+* Paste: `ctrl`+`shift`+`v`
+* But how to I highlight text? What to do the equivalent of the Windows `ctrl`+`shift`+[arrow]
 
 ## Ubuntu Shell commands
 * Make a directory: `$ mkdir [directoryname]`
@@ -105,6 +108,17 @@ Here I will use the GitHub "noreply" email which can be found in personal settin
 ```
 $ git config --global credential.helper store
 $ git config --global credential.helper cache
+```
+
+#### git diff
+View of unstaged changes
+```
+$ git diff [filepath]
+```
+
+View staged changes
+```
+$ git diff --cached [filepath]
 ```
 
 #### Change commit messege
