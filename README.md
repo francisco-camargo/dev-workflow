@@ -32,6 +32,15 @@ In Windows I can find it as
 ### Install Ubuntu in WSL
 Go to the Mircrosoft Store and install Ubuntu 20.04 (or whatever version you want).
 
+### Install Vim
+
+Commands to install Vim to be used within the terminal
+
+```
+$ sudo apt update
+$ sudo apt install vim
+```
+
 ### Install Python
 We do want to install python within WSL: [guide](https://computingforgeeks.com/how-to-install-python-on-ubuntu-linux-system/)
 
@@ -64,10 +73,19 @@ Here I will use the GitHub "noreply" email which can be found in personal settin
 $ git config --global credential.helper store
 $ git config --global credential.helper cache
 ```
-#### git squash
-[Guide](https://www.git-tower.com/learn/git/faq/git-squash) to using `rebase` to squash commits together. Also describes how to "squash and merge" during pull requests.
 
-Trying to just use "squash and merge" for pull requests. Note sure how commit messeges with appear.
+#### git squash
+[Guide](https://www.git-tower.com/learn/git/faq/git-squash) to using `rebase` to squash commits together. With several commits made, we can combine them into a single commit using `rebase`. For example, let's squash together the last 3 commits by running 
+
+```
+$ git rebase -i HEAD~3
+```
+
+This will bring up a text editor where we choose what to do with the last 3 commits. In this case we want to `pick` or `p` the oldest commit (which will be the top one) and `squash` or `s` all the rest. Once we save this, we will be asked to provide a comment for the new commit. The text that given to start with will contain all the comments from the commits that are getting combined. Whatever remains as uncommented will be used as the commit messege.
+
+The part I don't like about this is that I have to squash commits that are local, if any of the squash commits have been pushed  to the remote repo, this won't work. If there was a way to squash commits in the remote repo I'd be able to totally clean things up, but then again, it may be for the best that the history in the remote repo can't so easily be rewritten.
+
+The guide also describes how to "squash and merge" during pull requests in GitHub. I used this but I don't like it because after using this merge option the Network doesn't indicate that a merge was done: the branches in the network remain seperate.
 
 ### Install VSCode for WSL
 [Guide](https://code.visualstudio.com/docs/remote/wsl)
