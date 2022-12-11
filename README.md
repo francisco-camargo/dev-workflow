@@ -9,6 +9,8 @@ I also want to learn to use VSCode in conjuction with using Ubuntu.
 To clone this repo:
 `$ git clone https://github.com/francisco-camargo/learn_ubuntu.git`
 
+## (Optional) Using WSL
+
 ### Install WSL
 
 [Check](https://www.zdnet.com/article/windows-10-tip-find-out-if-your-pc-can-run-hyper-v/) if your PC can run Hyper-V
@@ -28,11 +30,11 @@ or
 
 `$ cd /home/francisco/dev_workflow`
 
-In Windows I can find it as
+In Windows I can find it at
 
 `\\wsl$\Ubuntu-20.04\home\francisco\dev_workflow`
 
-## Terminal Shortcuts
+### Terminal Shortcuts
 
 * New terminal tab: `ctrl`+`shift`+`t`
 * New terminal window: `ctrl`+`alt`+`t`
@@ -42,7 +44,7 @@ In Windows I can find it as
 * Paste: `ctrl`+`shift`+`v`
 * But how to I highlight text? What to do the equivalent of the Windows `ctrl`+`shift`+[arrow]
 
-## Ubuntu Shell commands
+### Ubuntu Shell commands
 
 * Make a directory: `$ mkdir [directoryname]`
 * New file: `$ touch [filename.extension]`
@@ -60,6 +62,7 @@ $ sudo apt install vim
 ```
 
 ### Vim on VSCode
+
 If you use VSCode you can also use Vim via the `Vim` extension, and you can learn Vim via the `Learn Vim` extension.
 
 ### Vim Commands
@@ -233,6 +236,25 @@ Python 3.10.X
 give an [alias](https://askubuntu.com/questions/320996/how-to-make-python-program-command-execute-python-3?newreg=a3ae2d11b44641baba3120c0f6ca6111)
 
 `$ alias python = python3.10`
+
+### Python Code Environment
+
+Download and install Python from [link](https://www.python.org/downloads/)
+
+To create an environment via the terminal, use
+`$ python -m venv env 
+`
+To activate environment, use
+`$ env/Scripts/activate 
+`
+To update `pip`, use
+`$ python -m pip install --upgrade pip 
+`
+To install libraries, use
+`$ pip install -r requirements.txt 
+`
+To deactivate an active environment, use
+`$ deactivate`
 
 ### Packaging
 
