@@ -34,7 +34,7 @@ Go to the Mircrosoft Store and install Ubuntu 20.04 (or whatever version you wan
 ## Terminal Shortcuts
 * New terminal tab: `ctrl`+`shift`+`t`
 * New terminal window: `ctrl`+`alt`+`t`
-* Switch to a specific tab: `alt` + # of tab
+* Switch to a specific tab: `alt` + [tab #]
 * Close current tab (or window): `ctrl`+`shift`+`w`
 * Copy: `ctrl`+`shift`+`c`
 * Paste: `ctrl`+`shift`+`v`
@@ -58,17 +58,20 @@ $ sudo apt install vim
 
 ### Vim Commands
 
-#### Normal Move
-
+#### Normal Mode
 * Get into command mode: `esc`
-* Insert mode: `i`
-* Move up: `k`
-* Move down: `j`
-* Move left: `h`
-* Move right: `l`
-
-* New line below and enter insert mode: `o`
-* New line above and enter insert mode: `O`
+* Enter Insert mode: `i`
+* Enter Visual mode: `v`
+* Enter Command mode: `:`
+* Moving the cursor
+    * Move up: `k`
+    * Move down: `j`
+    * Move left: `h`
+    * Move right: `l`
+* New line
+    * Below and enter insert mode: `o`
+    * Above and enter insert mode: `O`
+* Search and replace
 
 [Guide](https://phoenixnap.com/kb/cut-copy-paste-vim)
 * Copy
@@ -88,6 +91,8 @@ $ sudo apt install vim
 
 #### Visual Mode
 [Guide](https://phoenixnap.com/kb/cut-copy-paste-vim)
+
+## git
 
 ### Use GitHub
 Want to have this repo in GitHub and use a personal access token (PAT). I have set up a PAT in GitHub. It seems that in order to make use of it I need to clone the repo using HTTPS.
@@ -140,6 +145,8 @@ The part I don't like about this is that I have to squash commits that are local
 
 The guide also describes how to "squash and merge" during pull requests in GitHub. I used this but I don't like it because after using this merge option the Network doesn't indicate that a merge was done: the branches in the network remain seperate.
 
+## VSCode
+
 ### Install VSCode for WSL
 [Guide](https://code.visualstudio.com/docs/remote/wsl)
 Needed to have installed VSCode in the Windows side. In the Ubuntu terminal, go to the folder in which we want to work and start-up VSCode:
@@ -156,6 +163,8 @@ Alternatively: To have VSCode looking at Ubuntu go to the bottom left and click 
 * Python
 * PyLance?
 
+## Python
+
 ### Install Python
 We do want to install python within WSL: [guide](https://computingforgeeks.com/how-to-install-python-on-ubuntu-linux-system/)
 
@@ -167,3 +176,22 @@ Python 3.10.X
 give an [alias](https://askubuntu.com/questions/320996/how-to-make-python-program-command-execute-python-3?newreg=a3ae2d11b44641baba3120c0f6ca6111)
 
 `$ alias python = python3.10`
+
+### Packaging 
+Learn how to package code, there are several options, so first want to just look at all of them before picking one to run with
+
+[Guide](https://stackoverflow.com/questions/1471994/what-is-setup-py)
+
+[Guide](https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/#configuring-your-project)
+
+[Guide](https://godatadriven.com/blog/a-practical-guide-to-using-setup-py/), in it, they say: nowadays the use of setup.py is discouraged in favour of pyproject.toml together with setup.cfg. Find out how to use those [here](https://godatadriven.com/blog/a-practical-guide-to-setuptools-and-pyproject-toml/).
+
+Poetry also does a similar thin? [webpage](https://python-poetry.org/) Sounds like poetry also does dependancy management, so maybe use it instead of `venv`?
+ 
+What the heck is a wheel?
+
+### Code format
+* linting
+* black
+* flake8
+
