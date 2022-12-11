@@ -146,9 +146,11 @@ I tried using my noreply email and PAT, but that did not work and instead the CL
 
 Using this method of entering my credentials, I did not have to enter my credentials in subsequent `git push` commands!
 
-## # git PAT
+#### git PAT
 
-aagdkjhgs
+[Guide](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) on how to create a PAT. At the top of the guide there are some valuable warnings, including one on using encrypted secrets; not storing sensitive info in repos.
+
+<img src="image/README/1670732984366.png" width="500">
 
 #### git diff
 
