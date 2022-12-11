@@ -138,6 +138,12 @@ $ git config --global credential.helper store
 $ git config --global credential.helper cache
 ```
 
+when I do `git push` on a new machine I get the following pop-up:
+
+![1670731520949](image/README/1670731520949.png)
+
+I tried using my noreply email and PAT, but that did not work and instead the CLI prompted me to enter my username. I used my noreply email and got a pop-up asking for my password. I used a new PAT (created in the moment for the machine I am using), and I was able to succesfully push to the remote repo.
+
 #### git diff
 
 View of unstaged changes
