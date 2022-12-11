@@ -146,7 +146,7 @@ I tried using my noreply email and PAT, but that did not work and instead the CL
 
 Using this method of entering my credentials, I did not have to enter my credentials in subsequent `git push` commands!
 
-#### git PAT
+#### GitHub PAT
 
 [Guide](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) on how to create a PAT. At the top of the guide there are some valuable warnings, including one on using encrypted secrets; not storing sensitive info in repos.
 
@@ -205,7 +205,17 @@ Alternatively: To have VSCode looking at Ubuntu go to the bottom left and click 
 
 * Vim
 * Python
-* PyLance?
+* PyLance
+* Typora
+* vscode-pdf
+
+### VSCode shortcuts
+
+Command palette
+`Ctrl+Shift+p`
+
+Open file
+`Ctrl+p`
 
 ## Python
 
