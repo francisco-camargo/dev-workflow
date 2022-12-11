@@ -234,7 +234,6 @@ Python 3.10.X
 ```
 
 give an [alias](https://askubuntu.com/questions/320996/how-to-make-python-program-command-execute-python-3?newreg=a3ae2d11b44641baba3120c0f6ca6111)
-
 `$ alias python = python3.10`
 
 ### Python Code Environment
@@ -242,17 +241,17 @@ give an [alias](https://askubuntu.com/questions/320996/how-to-make-python-progra
 Download and install Python from [link](https://www.python.org/downloads/)
 
 To create an environment via the terminal, use
-`$ python -m venv env 
-`
+`$ python -m venv env`
+
 To activate environment, use
-`$ env/Scripts/activate 
-`
+`$ env/Scripts/activate`
+
 To update `pip`, use
-`$ python -m pip install --upgrade pip 
-`
+`$ python -m pip install --upgrade pip`
+
 To install libraries, use
-`$ pip install -r requirements.txt 
-`
+`$ pip install -r requirements.txt`
+
 To deactivate an active environment, use
 `$ deactivate`
 
