@@ -1,28 +1,13 @@
-# Learn to Develop on Ubuntu
+# My Development Workflow
 
-## Goal
+This repo collects the details necessary to set up my dev workflow on a new machine.
 
-I want to learn to use Ubuntu to develop. Will do this both via the Windows Subsystem for Linux (WSL)  on one machine and from a machine with Ubuntu installed as the OS.
+Old: I want to learn to use Ubuntu to develop. Will do this both via the Windows Subsystem for Linux (WSL)  on one machine and from a machine with Ubuntu installed as the OS.
 
 I also want to learn to use VSCode in conjuction with using Ubuntu.
 
-## Clone repo
-
+To clone this repo:
 `$ git clone https://github.com/francisco-camargo/learn_ubuntu.git`
-
-## Install WSL
-
-Where is this repo in my local? I can get to it from the Ubuntu terminal using
-
-`$ cd learn_ubuntu`
-
-or
-
-`$ cd /home/francisco/learn_ubuntu`
-
-In Windows I can find it as
-
-`\\wsl$\Ubuntu-20.04\home\francisco\learn_ubuntu`
 
 ### Install WSL
 
@@ -32,6 +17,20 @@ In Windows I can find it as
 ### Install Ubuntu in WSL
 
 Go to the Mircrosoft Store and install Ubuntu 20.04 (or whatever version you want).
+
+### Where is this repo once it is cloned?
+
+Where is this repo in my local? I can get to it from the Ubuntu terminal using
+
+`$ cd dev_workflow`
+
+or
+
+`$ cd /home/francisco/dev_workflow`
+
+In Windows I can find it as
+
+`\\wsl$\Ubuntu-20.04\home\francisco\dev_workflow`
 
 ## Terminal Shortcuts
 
@@ -59,6 +58,9 @@ Commands to install Vim to be used within the terminal
 $ sudo apt update
 $ sudo apt install vim
 ```
+
+### Vim on VSCode
+If you use VSCode you can also use Vim via the `Vim` extension, and you can learn Vim via the `Learn Vim` extension.
 
 ### Vim Commands
 
