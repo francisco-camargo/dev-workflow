@@ -4,11 +4,11 @@ This repo collects the details necessary to set up my dev workflow on a new mach
 
 Old: I want to learn to use Ubuntu to develop. Will do this both via the Windows Subsystem for Linux (WSL)  on one machine and from a machine with Ubuntu installed as the OS.
 
-I also want to learn to use VSCode in conjuction with using Ubuntu.
+I also want to learn to use VSCode in conjunction with using Ubuntu.
 
 To clone this repo:
 
-```
+```Shell
 $ git clone https://github.com/francisco-camargo/learn_ubuntu.git
 ```
 
@@ -22,9 +22,9 @@ In particular, this print the url of the remote repo.
 
 #### (Optional) GitHub credentials
 
-Here are the credentials I use when workign with a personal GitHub repo.
+Here are the credentials I use when working with a personal GitHub repo.
 
-For the username I will use the GitHub "noreply" email (because... something about hidding my email) which can be found in personal settings on GitHub, [guide](https://stackoverflow.com/a/51097104/9205210).
+For the username I will use the GitHub "noreply" email (because... something about hiding my email) which can be found in personal settings on GitHub, [guide](https://stackoverflow.com/a/51097104/9205210).
 
 For the password use a personal access token (PAT). It seems that in order to make use of it I need to clone the repo using HTTPS. Will create one PAT per computer.
 
@@ -38,14 +38,14 @@ For the password use a personal access token (PAT). It seems that in order to ma
 
 To set credentials specific to the current repo:
 
-```
+```Shell
 $ git config user.name "name" 
 $ git config user.email "email@email.com"
 ```
 
 To set global credentials use:
 
-```
+```Shell
 $ git config --global user.name "name"
 $ git config --global user.email "email@email.com"
 ```
@@ -54,13 +54,13 @@ when I do `git push` on a new machine I get the following pop-up:
 
 <img src="image/README/1670731520949_b.png" width="350">
 
-I tried using my noreply email and PAT, but that did not work and instead the CLI prompted me to enter my username. I used my noreply email and got a pop-up asking for my password. I used a new PAT (created in the moment for the machine I am using), and I was able to succesfully push to the remote repo.
+I tried using my noreply email and PAT, but that did not work and instead the CLI prompted me to enter my username. I used my noreply email and got a pop-up asking for my password. I used a new PAT (created in the moment for the machine I am using), and I was able to successfully push to the remote repo.
 
 Using this method of entering my credentials, I did not have to enter my credentials in subsequent `git push` commands!
 
-However if this is a problem. I don't want to have to enter my username and password (PAT) everytime, so follow this [guide](https://www.freecodecamp.org/news/how-to-fix-git-always-asking-for-user-credentials/) or maybe [this](https://www.techiediaries.com/git/stop-git-always-asking-for-username-and-password-when-using-https/) guide and essentially run the following commands (at the moment, not sure that I've gotten any of this to work...):
+However if this is a problem. I don't want to have to enter my username and password (PAT) every time, so follow this [guide](https://www.freecodecamp.org/news/how-to-fix-git-always-asking-for-user-credentials/) or maybe [this](https://www.techiediaries.com/git/stop-git-always-asking-for-username-and-password-when-using-https/) guide and essentially run the following commands (at the moment, not sure that I've gotten any of this to work...):
 
-```
+```Shell
 $ git config --global credential.helper store
 $ git config --global credential.helper cache
 ```
@@ -71,21 +71,21 @@ $ git config --global credential.helper cache
 
 View of unstaged changes
 
-```
+```Shell
 $ git diff [filepath]
 ```
 
 View staged changes
 
-```
+```Shell
 $ git diff --cached [filepath]
 ```
 
-#### Change commit messege
+#### Change commit message
 
-To change the messege of the last commit
+To change the message of the last commit
 
-```
+```Shell
 $ git commit --amend
 ```
 
@@ -93,19 +93,21 @@ $ git commit --amend
 
 [Guide](https://www.git-tower.com/learn/git/faq/git-squash) to using `rebase` to squash commits together. With several commits made, we can combine them into a single commit using `rebase`. For example, let's squash together the last 3 commits by running
 
-```
+```Shell
 $ git rebase -i HEAD~3
 ```
 
-This will bring up a text editor where we choose what to do with the last 3 commits. In this case we want to `pick` or `p` the oldest commit (which will be the top one) and `squash` or `s` all the rest. Once we save this, we will be asked to provide a comment for the new commit. The text that given to start with will contain all the comments from the commits that are getting combined. Whatever remains as uncommented will be used as the commit messege.
+This will bring up a text editor where we choose what to do with the last 3 commits. In this case we want to `pick` or `p` the oldest commit (which will be the top one) and `squash` or `s` all the rest. Once we save this, we will be asked to provide a comment for the new commit. The text that given to start with will contain all the comments from the commits that are getting combined. Whatever remains as uncommented will be used as the commit message.
 
 The part I don't like about this is that I have to squash commits that are local, if any of the squash commits have been pushed  to the remote repo, this won't work. If there was a way to squash commits in the remote repo I'd be able to totally clean things up, but then again, it may be for the best that the history in the remote repo can't so easily be rewritten.
 
-The guide also describes how to "squash and merge" during pull requests in GitHub. I used this but I don't like it because after using this merge option the Network doesn't indicate that a merge was done: the branches in the network remain seperate.
+The guide also describes how to "squash and merge" during pull requests in GitHub. I used this but I don't like it because after using this merge option the Network doesn't indicate that a merge was done: the branches in the network remain separate.
 
 ## VSCode
 
-### (Optionl) Install VSCode for WSL
+I use the **Dark+** color theme.
+
+### (Optional) Install VSCode for WSL
 
 [Guide](https://code.visualstudio.com/docs/remote/wsl)
 Needed to have installed VSCode in the Windows side. In the Ubuntu terminal, go to the folder in which we want to work and start-up VSCode:
@@ -123,9 +125,14 @@ Alternatively: To have VSCode looking at Ubuntu go to the bottom left and click 
 * (Optional) Vim
 * (Optional) Learn Vim
 * (Optional) Typora
+  * I use the Native code block theme
 * (Optional) vscode-pdf
+* (Optional) Code Spell Checker
+  * While cursor is on a word of interest, hit **Ctrl+.** to show spell checking options
 
 ### VSCode shortcuts
+
+[Reference](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf) of VSCode shortcuts
 
 Command palette
 **Ctrl+Shift+p**
@@ -133,11 +140,15 @@ Command palette
 Open file
 **Ctrl+p**
 
-#### Navigating Tabs
+Tab windows: VSCode tabs can put placed into vertical slots. To place the current tab into a certain slot, use **Ctrl+Alt+#** where **#** can be 1, 2, etc. To switch **between** tabs within the same slot, use **Ctrl+Tab**. To switch between tabs, use **Ctrl+#**.
 
-VSCode tabs can put placed into vertical slots. To place the current tab into a certain slot, use **Ctrl+Alt+#** where **#** can be 1, 2, etc. To switch **between** tabs within the same slot, use **Ctrl+Tab**. To switch between tabs, use **Ctrl+#**.
+Switch between terminal and editor:
+**Ctrl+`**
 
-[Reference](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf) of VSCode shortcuts
+Debug console:
+**Ctrl+Shift+y**
+
+In the Settings page, look for Line Number; I like to use relative line numbers because it makes it easier to navigate with Vim.
 
 ## Vim
 
@@ -145,7 +156,7 @@ VSCode tabs can put placed into vertical slots. To place the current tab into a 
 
 Commands to install Vim to be used within the terminal
 
-```
+```Shell
 $ sudo apt update
 $ sudo apt install vim
 ```
@@ -162,7 +173,7 @@ If you use VSCode you can also use Vim via the **Vim** extension, and you can le
 
 * Get into command mode: `esc`
 * Enter Insert mode: `i`
-* Enter Insert mode one charecter ahead: `a`
+* Enter Insert mode one character ahead: `a`
 * Enter Visual mode: `v`
 * Enter Command mode: `:`
 * Moving the cursor
@@ -201,7 +212,7 @@ This is the mode used to highlight text, [guide](https://phoenixnap.com/kb/cut-c
 
 We do want to install python within WSL: [guide](https://computingforgeeks.com/how-to-install-python-on-ubuntu-linux-system/)
 
-```
+```Shell
 $ python3.10 --version
 Python 3.10.X
 ```
@@ -238,7 +249,7 @@ Learn how to package code, there are several options, so first want to just look
 
 [Guide](https://godatadriven.com/blog/a-practical-guide-to-using-setup-py/), in it, they say: nowadays the use of setup.py is discouraged in favour of pyproject.toml together with setup.cfg. Find out how to use those [here](https://godatadriven.com/blog/a-practical-guide-to-setuptools-and-pyproject-toml/).
 
-Poetry also does a similar thin? [webpage](https://python-poetry.org/) Sounds like poetry also does dependancy management, so maybe use it instead of `venv`?
+Poetry also does a similar thin? [webpage](https://python-poetry.org/) Sounds like poetry also does dependance management, so maybe use it instead of `venv`?
 
 What the heck is a wheel?
 
@@ -247,6 +258,26 @@ What the heck is a wheel?
 * linting
 * black
 * flake8
+
+### Running Python code in VSCode
+There are several ways to run Python code in VSCode
+
+I am trying to figure out how to have the terminal behave like the Spyder terminal, this is what I have so far:
+In the VSCode terminal run
+```Shell
+ipython
+```
+and then within the IPython terminal that has now been instantiated, import the module you want to use
+```Python
+import main; main.main()
+```
+
+but wait; run this instead while in the IPython terminal
+```Python
+%run main.py
+```
+This will have the same effect as clicking **Run** within Spyder on whatever Python file Spyder has open. This also has the benefit of seeing changes to the code while still in IPython, which is not working when using the "import main" approach.
+
 
 ## (Optional) Using WSL
 
@@ -257,7 +288,7 @@ What the heck is a wheel?
 
 ### Install Ubuntu in WSL
 
-Go to the Mircrosoft Store and install Ubuntu 20.04 (or whatever version you want).
+Go to the Microsoft Store and install Ubuntu 20.04 (or whatever version you want).
 
 ### Where is this repo once it is cloned?
 
