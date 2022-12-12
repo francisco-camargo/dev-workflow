@@ -1,4 +1,4 @@
-# My Development Workflow
+# Development Workflow
 
 This repo collects the details necessary to set up my dev workflow on a new machine.
 
@@ -7,120 +7,32 @@ Old: I want to learn to use Ubuntu to develop. Will do this both via the Windows
 I also want to learn to use VSCode in conjuction with using Ubuntu.
 
 To clone this repo:
-`$ git clone https://github.com/francisco-camargo/learn_ubuntu.git`
-
-## (Optional) Using WSL
-
-### Install WSL
-
-[Check](https://www.zdnet.com/article/windows-10-tip-find-out-if-your-pc-can-run-hyper-v/) if your PC can run Hyper-V
-[Guide](https://www.omgubuntu.co.uk/how-to-install-wsl2-on-windows-10)
-
-### Install Ubuntu in WSL
-
-Go to the Mircrosoft Store and install Ubuntu 20.04 (or whatever version you want).
-
-### Where is this repo once it is cloned?
-
-Where is this repo in my local? I can get to it from the Ubuntu terminal using
-
-`$ cd dev_workflow`
-
-or
-
-`$ cd /home/francisco/dev_workflow`
-
-In Windows I can find it at
-
-`\\wsl$\Ubuntu-20.04\home\francisco\dev_workflow`
-
-### Terminal Shortcuts
-
-* New terminal tab: `ctrl`+`shift`+`t`
-* New terminal window: `ctrl`+`alt`+`t`
-* Switch to a specific tab: `alt` + [tab #]
-* Close current tab (or window): `ctrl`+`shift`+`w`
-* Copy: `ctrl`+`shift`+`c`
-* Paste: `ctrl`+`shift`+`v`
-* But how to I highlight text? What to do the equivalent of the Windows `ctrl`+`shift`+[arrow]
-
-### Ubuntu Shell commands
-
-* Make a directory: `$ mkdir [directoryname]`
-* New file: `$ touch [filename.extension]`
-* Check contents of file (?): `$ cat [filepath]`
-
-## Vim
-
-### Install Vim
-
-Commands to install Vim to be used within the terminal
 
 ```
-$ sudo apt update
-$ sudo apt install vim
+$ git clone https://github.com/francisco-camargo/learn_ubuntu.git
 ```
-
-### Vim on VSCode
-
-If you use VSCode you can also use Vim via the `Vim` extension, and you can learn Vim via the `Learn Vim` extension. The `Learn Vim` [book](https://www.barbarianmeetscoding.com/boost-your-coding-fu-with-vscode-and-vim/dedication/), and [reference](https://www.barbarianmeetscoding.com/boost-your-coding-fu-with-vscode-and-vim/cheatsheet) of Vim commands.
-
-[Guide](https://hoitz.medium.com/improved-vim-setup-in-visual-studio-code-bc579501b80c) on how to customize Vim keybindings within VSCode.
-
-### Vim Commands
-
-#### Normal Mode
-
-* Get into command mode: `esc`
-* Enter Insert mode: `i`
-* Enter Visual mode: `v`
-* Enter Command mode: `:`
-* Moving the cursor
-  * Move up: `k`
-  * Move down: `j`
-  * Move left: `h`
-  * Move right: `l`
-* New line
-  * Below and enter insert mode: `o`
-  * Above and enter insert mode: `O`
-* Search and replace
-
-[Guide](https://phoenixnap.com/kb/cut-copy-paste-vim)
-
-* Copy
-  * Everything to the right: `y$`
-  * (Almost) everything to the left: `y^`
-  * Entire line: `yy`
-  * Word with its trailing whitespace: `yaw`
-  * Word without its trailing whitespace: `yiw`
-  * `yfx`
-  * `ytx`
-* Past
-  * `p`
-  * `P`
-* Cut
-  * Current line: `dd`
-  * Everything to the right: `d$`
-
-#### Visual Mode
-
-[Guide](https://phoenixnap.com/kb/cut-copy-paste-vim)
 
 ## git
 
-### Use GitHub
-
-Want to have this repo in GitHub and use a personal access token (PAT). I have set up a PAT in GitHub. It seems that in order to make use of it I need to clone the repo using HTTPS.
-
-Will create one PAT per computer.
-
-### Using git
+I'm going to assume that you first create a repo in a remote location, and never create one locally. Assume the repo is made, the first task is thus to be able to clone it. A prerequisite to being able to clone is to have your credentials set in the local machine.
 
 To view the info of the current repo
 `$ cat .git/config`
 In particular, this print the url of the remote repo.
 
-#### git credentials
+#### (Optional) GitHub credentials
+
+Here are the credentials I use when workign with a personal GitHub repo.
+
+For the username I will use the GitHub "noreply" email (because... something about hidding my email) which can be found in personal settings on GitHub, [guide](https://stackoverflow.com/a/51097104/9205210).
+
+For the password use a personal access token (PAT). It seems that in order to make use of it I need to clone the repo using HTTPS. Will create one PAT per computer.
+
+[Guide](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) on how to create a PAT. At the top of the guide there are some valuable warnings, including one on using encrypted secrets; not storing sensitive info in repos.
+
+<img src="image/README/1670732984366.png" width="500">
+
+### git credentials
 
 [Guide](https://support.atlassian.com/bitbucket-cloud/docs/configure-your-dvcs-username-for-commits/) on `git` credentials
 
@@ -138,26 +50,22 @@ $ git config --global user.name "name"
 $ git config --global user.email "email@email.com"
 ```
 
-Here I will use the GitHub "noreply" email which can be found in personal settings on GitHub, [guide](https://stackoverflow.com/a/51097104/9205210). For the password use a PAT. I don't want to have to enter my username and password (PAT) everytime, so follow this [guide](https://www.freecodecamp.org/news/how-to-fix-git-always-asking-for-user-credentials/) or maybe [this](https://www.techiediaries.com/git/stop-git-always-asking-for-username-and-password-when-using-https/) guide and essentially run the following commands:
+when I do `git push` on a new machine I get the following pop-up:
+
+<img src="image/README/1670731520949_b.png" width="350">
+
+I tried using my noreply email and PAT, but that did not work and instead the CLI prompted me to enter my username. I used my noreply email and got a pop-up asking for my password. I used a new PAT (created in the moment for the machine I am using), and I was able to succesfully push to the remote repo.
+
+Using this method of entering my credentials, I did not have to enter my credentials in subsequent `git push` commands!
+
+However if this is a problem. I don't want to have to enter my username and password (PAT) everytime, so follow this [guide](https://www.freecodecamp.org/news/how-to-fix-git-always-asking-for-user-credentials/) or maybe [this](https://www.techiediaries.com/git/stop-git-always-asking-for-username-and-password-when-using-https/) guide and essentially run the following commands (at the moment, not sure that I've gotten any of this to work...):
 
 ```
 $ git config --global credential.helper store
 $ git config --global credential.helper cache
 ```
 
-when I do `git push` on a new machine I get the following pop-up:
-
-<img src="image/README/1670731520949.png" width="350">
-
-I tried using my noreply email and PAT, but that did not work and instead the CLI prompted me to enter my username. I used my noreply email and got a pop-up asking for my password. I used a new PAT (created in the moment for the machine I am using), and I was able to succesfully push to the remote repo.
-
-Using this method of entering my credentials, I did not have to enter my credentials in subsequent `git push` commands!
-
-#### GitHub PAT
-
-[Guide](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) on how to create a PAT. At the top of the guide there are some valuable warnings, including one on using encrypted secrets; not storing sensitive info in repos.
-
-<img src="image/README/1670732984366.png" width="500">
+### git commands
 
 #### git diff
 
@@ -197,7 +105,7 @@ The guide also describes how to "squash and merge" during pull requests in GitHu
 
 ## VSCode
 
-### Install VSCode for WSL
+### (Optionl) Install VSCode for WSL
 
 [Guide](https://code.visualstudio.com/docs/remote/wsl)
 Needed to have installed VSCode in the Windows side. In the Ubuntu terminal, go to the folder in which we want to work and start-up VSCode:
@@ -210,21 +118,82 @@ Alternatively: To have VSCode looking at Ubuntu go to the bottom left and click 
 
 ### VSCode Extensions
 
-* Vim
 * Python
 * PyLance
-* Typora
-* vscode-pdf
+* (Optional) Vim
+* (Optional) Learn Vim
+* (Optional) Typora
+* (Optional) vscode-pdf
 
 ### VSCode shortcuts
 
 Command palette
-`Ctrl+Shift+p`
+**Ctrl+Shift+p**
 
 Open file
-`Ctrl+p`
+**Ctrl+p**
+
+#### Navigating Tabs
+
+VSCode tabs can put placed into vertical slots. To place the current tab into a certain slot, use **Ctrl+Alt+#** where **#** can be 1, 2, etc. To switch **between** tabs within the same slot, use **Ctrl+Tab**. To switch between tabs, use **Ctrl+#**.
 
 [Reference](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf) of VSCode shortcuts
+
+## Vim
+
+### (Optional) Install Vim on Linux
+
+Commands to install Vim to be used within the terminal
+
+```
+$ sudo apt update
+$ sudo apt install vim
+```
+
+### Vim on VSCode
+
+If you use VSCode you can also use Vim via the **Vim** extension, and you can learn Vim via the **Learn Vim** extension. The **Learn Vim** [book](https://www.barbarianmeetscoding.com/boost-your-coding-fu-with-vscode-and-vim/dedication/), and [reference](https://www.barbarianmeetscoding.com/boost-your-coding-fu-with-vscode-and-vim/cheatsheet) of Vim commands.
+
+[Guide](https://hoitz.medium.com/improved-vim-setup-in-visual-studio-code-bc579501b80c) on how to customize Vim keybindings within VSCode.
+
+### Vim Commands
+
+#### Normal Mode
+
+* Get into command mode: `esc`
+* Enter Insert mode: `i`
+* Enter Insert mode one charecter ahead: `a`
+* Enter Visual mode: `v`
+* Enter Command mode: `:`
+* Moving the cursor
+  * Move up: `k`
+  * Move down: `j`
+  * Move left: `h`
+  * Move right: `l`
+* New line
+  * Below and enter insert mode: `o`
+  * Above and enter insert mode: `O`
+* Search and replace
+
+[Guide](https://phoenixnap.com/kb/cut-copy-paste-vim)
+
+* Copy
+  * Everything to the right: `y$`
+  * (Almost) everything to the left: `y^`
+  * Entire line: `yy`
+  * Word with its trailing whitespace: `yaw`
+  * Word without its trailing whitespace: `yiw`
+  * `yfx`
+  * `ytx`
+* Past
+  * `P`
+* Cut
+  * Current line: `dd`
+  * Everything to the right: `d$`
+
+#### Visual Mode
+
+This is the mode used to highlight text, [guide](https://phoenixnap.com/kb/cut-copy-paste-vim).
 
 ## Python
 
@@ -278,3 +247,44 @@ What the heck is a wheel?
 * linting
 * black
 * flake8
+
+## (Optional) Using WSL
+
+### Install WSL
+
+[Check](https://www.zdnet.com/article/windows-10-tip-find-out-if-your-pc-can-run-hyper-v/) if your PC can run Hyper-V
+[Guide](https://www.omgubuntu.co.uk/how-to-install-wsl2-on-windows-10)
+
+### Install Ubuntu in WSL
+
+Go to the Mircrosoft Store and install Ubuntu 20.04 (or whatever version you want).
+
+### Where is this repo once it is cloned?
+
+Where is this repo in my local? I can get to it from the Ubuntu terminal using
+
+`$ cd dev_workflow`
+
+or
+
+`$ cd /home/francisco/dev_workflow`
+
+In Windows I can find it at
+
+`\\wsl$\Ubuntu-20.04\home\francisco\dev_workflow`
+
+### Terminal Shortcuts
+
+* New terminal tab: `ctrl`+`shift`+`t`
+* New terminal window: `ctrl`+`alt`+`t`
+* Switch to a specific tab: `alt` + [tab #]
+* Close current tab (or window): `ctrl`+`shift`+`w`
+* Copy: `ctrl`+`shift`+`c`
+* Paste: `ctrl`+`shift`+`v`
+* But how to I highlight text? What to do the equivalent of the Windows `ctrl`+`shift`+[arrow]
+
+### Ubuntu Shell commands
+
+* Make a directory: `$ mkdir [directoryname]`
+* New file: `$ touch [filename.extension]`
+* Check contents of file (?): `$ cat [filepath]`
