@@ -1,7 +1,7 @@
 Development Workflow
 ====================
 
-***Guide to setting up a machine for code development***
+***Guide to setting up and using a machine for code development***
 
 Francisco Camargo
 
@@ -16,8 +16,48 @@ I also want to learn to use VSCode in conjunction with using Ubuntu.
 To clone this repo:
 
 ```bash
-git clone https://github.com/francisco-camargo/learn_ubuntu.git
+git clone https://github.com/francisco-camargo/dev_workflow.git
 ```
+
+## Core Installations
+
+git
+Python
+Sublime
+Spyder # entry IDE, install within the code environment if you want or install on its own
+VSCode
+
+## Python related installations
+
+update pip
+matplotlib
+numpy
+pandas
+pyyaml
+pytest
+
+### Machine Learning modules
+
+scikit-learn
+scipy
+mlrose-hiive # gets us NumPy, SciPy and Scikit-Learn
+imbalanced-learn # for imbalanced data
+hydra-core # use to track experiments
+
+spark / PySpark
+
+PyTorch
+
+* torch
+* torchvision
+* torchaudio
+
+## SQL
+
+* SQLite
+* MySQL
+* DBeaver
+* DataGrip
 
 # Markdown
 
@@ -191,6 +231,8 @@ Alternatively: To have VSCode looking at Ubuntu go to the bottom left and click 
 * (Optional) vscode-pdf
 * (Optional) Code Spell Checker
   * While cursor is on a word of interest, hit **Ctrl+.** to show spell checking options
+* Docker
+* Remote - SSH
 
 ## Open Settings
 
@@ -221,6 +263,10 @@ Debug console:
 **Ctrl+Shift+y**
 
 In the Settings page, look for Line Number; I like to use relative line numbers because it makes it easier to navigate with Vim.
+
+## Using VSCode Remotely
+
+(Guide)[https://medium.com/@christyjacob4/using-vscode-remotely-on-an-ec2-instance-7822c4032cff]
 
 # Vim
 
@@ -280,14 +326,28 @@ This is the mode used to highlight text, [guide](https://phoenixnap.com/kb/cut-c
 
 # Python
 
-## Install Python
+## Install Python on Windows
 
-We do want to install python within WSL: [guide](https://computingforgeeks.com/how-to-install-python-on-ubuntu-linux-system/)
+(Link)[https://www.python.org/downloads/] to download Python.
+
+During installation, be sure to add Python to PATH:
+
+![1670921358303](image/README/1670921358303.png)
+
+Check the version of Python. Note that it can have different aliases, e.g. `python`, `py`, `python3` etc.
 
 ```bash
-python3.10 --version
->>> Python 3.10.X
+python --version
+>>> Python 3.11.0
 ```
+
+If you use VSCode, be sure that the desired Python Interpreter is used: from the Command Pallette search for `Python: Select Interpreter`. Can check the bottom right of the window:
+
+![1670921755378](image/README/1670921755378.png)
+
+## Install Python on Ubuntu
+
+We do want to install python within WSL: [guide](https://computingforgeeks.com/how-to-install-python-on-ubuntu-linux-system/)
 
 give an [alias](https://askubuntu.com/questions/320996/how-to-make-python-program-command-execute-python-3?newreg=a3ae2d11b44641baba3120c0f6ca6111)
 `alias python = python3.10`
