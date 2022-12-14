@@ -110,7 +110,7 @@ Some useful tags:
 
 ### YAML Header
 
-(Guide)[https://zsmith27.github.io/rmarkdown_crash-course/lesson-4-yaml-headers.html]
+[Guide](https://zsmith27.github.io/rmarkdown_crash-course/lesson-4-yaml-headers.html)
 
 # git
 
@@ -266,7 +266,7 @@ In the Settings page, look for Line Number; I like to use relative line numbers 
 
 ## Using VSCode Remotely
 
-(Guide)[https://medium.com/@christyjacob4/using-vscode-remotely-on-an-ec2-instance-7822c4032cff]
+[Guide](https://medium.com/@christyjacob4/using-vscode-remotely-on-an-ec2-instance-7822c4032cff)
 
 # Vim
 
@@ -379,22 +379,22 @@ guide for using `black` and `flake8` and `isort` in a `pyproject.toml`, also tal
 
 Code formatting shortcut in VSCode **Alt+Shift+f** or look for `Format Document` in the command pallette
 
-Gonna go with `black`, (guide)[https://black.readthedocs.io/en/stable/getting_started.html]. Add it to `requirements.txt`
+Gonna go with `black`, [guide](https://black.readthedocs.io/en/stable/getting_started.html). Add it to `requirements.txt`
 Run `black` by running
 
 ```bash
 black {source_file_or_directory}...
 ```
 
-This worked right away. However I'm not a fan of using double-quotes instead of single quotes, so one option is to pass `--skip-string-normalization` in the command line or to insert it into the settings, (guide)[https://sbarnea.com/lint/black/]
+This worked right away. However I'm not a fan of using double-quotes instead of single quotes, so one option is to pass `--skip-string-normalization` in the command line or to insert it into the settings, [guide](https://sbarnea.com/lint/black/)
 
 * linting
 * flake8
 
 ## docstrings
 
-(guide)[https://www.programiz.com/python-programming/docstrings]
-(guide)[https://stackoverflow.com/questions/3898572/what-are-the-most-common-python-docstring-formats] to popular docstring formats
+[guide](https://www.programiz.com/python-programming/docstrings)
+[guide](https://stackoverflow.com/questions/3898572/what-are-the-most-common-python-docstring-formats] to popular docstring formats
 
 ## Running Python code in VSCode
 
@@ -406,20 +406,25 @@ In the VSCode terminal run
 ```bash
 ipython
 ```
+need to load (once) the `%autoreload` extension, [guide](https://ipython.readthedocs.io/en/stable/config/extensions/autoreload.html), 
 
-and then within the IPython terminal that has now been instantiated, import the module you want to use
+```Python
+%load_ext autoreload
+```
+now can use `%autoreload`
+```Python
+%autoreload
+%run main.py
+```
+I was able to run both of these lines together in the VSCode terminal by using **Ctrl+o** in the terminal to have multiple lines of input.
+
+This will have the same effect as clicking **Run** within Spyder on whatever Python file Spyder has open. This also has the benefit of seeing changes to the code while still in IPython, which is not working when using the "import main" approach.
+
+(old) and then within the IPython terminal that has now been instantiated, import the module you want to use
 
 ```Python
 import main; main.main()
 ```
-
-but wait; run this instead while in the IPython terminal
-
-```Python
-%run main.py
-```
-
-This will have the same effect as clicking **Run** within Spyder on whatever Python file Spyder has open. This also has the benefit of seeing changes to the code while still in IPython, which is not working when using the "import main" approach.
 
 ## Using `setup.py`
 
