@@ -328,7 +328,7 @@ This is the mode used to highlight text, [guide](https://phoenixnap.com/kb/cut-c
 
 ## Install Python on Windows
 
-(Link)[https://www.python.org/downloads/] to download Python.
+[Link](https://www.python.org/downloads/) to download Python.
 
 During installation, be sure to add Python to PATH:
 
@@ -394,7 +394,7 @@ This worked right away. However I'm not a fan of using double-quotes instead of 
 ## docstrings
 
 [guide](https://www.programiz.com/python-programming/docstrings)
-[guide](https://stackoverflow.com/questions/3898572/what-are-the-most-common-python-docstring-formats] to popular docstring formats
+[guide](https://stackoverflow.com/questions/3898572/what-are-the-most-common-python-docstring-formats) to popular docstring formats
 
 ## Running Python code in VSCode
 
@@ -428,7 +428,7 @@ import main; main.main()
 
 ## Using `setup.py`
 
-The (documentation)[https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html] for `black` suggests that we can use a `pyproject.toml` file to replace both `setup.py` and `setup.cfg` files.
+The [documentation](https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html) for `black` suggests that we can use a `pyproject.toml` file to replace both `setup.py` and `setup.cfg` files.
 
 ![1670897817471](image/README/1670897817471.png)
 
