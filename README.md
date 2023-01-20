@@ -20,6 +20,7 @@ git clone https://github.com/francisco-camargo/dev_workflow.git
 ```
 
 ## Core Installations
+
 git
 Python
 Sublime
@@ -27,6 +28,7 @@ Spyder # entry IDE, install within the code environment if you want or install o
 VSCode # more powerful IDE but takes time to learn
 
 ## Python related installation
+
 update pip
 ipython # not sure why I needed this at some point during dev a project... originally I did not need to have this explicitly
 matplotlib
@@ -39,6 +41,7 @@ mypy for type hinting
 logging for logging
 
 ### Machine Learning modules
+
 scikit-learn
 scipy
 mlrose-hiive # gets us NumPy, SciPy and Scikit-Learn
@@ -49,11 +52,13 @@ hydra-zen # sold as better for scientific applications
 omegaconf # used to parse yaml files, used by hydra
 
 PyTorch
+
 * torch
 * torchvision
 * torchaudio
 
 ## SQL
+
 * SQLite
 * MySQL
 * DBeaver
@@ -157,6 +162,8 @@ when I do `git push` on a new machine I get the following pop-up:
 I tried using my noreply email and PAT, but that did not work and instead the CLI prompted me to enter my username. I used my noreply email and got a pop-up asking for my password. I used a new PAT (created in the moment for the machine I am using), and I was able to successfully push to the remote repo.
 
 Using this method of entering my credentials, I did not have to enter my credentials in subsequent `git push` commands!
+
+2023-01-20: made a new PAT (previous one had expired). I get to the pop-up window (seen above), and I was able to connect via a  `git bash` terminal within VSCode by loging-in with my github email (not the no-reply one) and used my new PAT as the password
 
 However if this is a problem. I don't want to have to enter my username and password (PAT) every time, so follow this [guide](https://www.freecodecamp.org/news/how-to-fix-git-always-asking-for-user-credentials/) or maybe [this](https://www.techiediaries.com/git/stop-git-always-asking-for-username-and-password-when-using-https/) guide and essentially run the following commands (at the moment, not sure that I've gotten any of this to work...):
 
@@ -323,7 +330,8 @@ If you use VSCode you can also use Vim via the **Vim** extension, and you can le
 ### Visual Mode
 
 This is the mode used to highlight text, [guide](https://phoenixnap.com/kb/cut-copy-paste-vim).
-* Highlight current word: `viw` 
+
+* Highlight current word: `viw`
 
 # Python
 
@@ -407,16 +415,20 @@ In the VSCode terminal run
 ```bash
 ipython
 ```
-need to load (once) the `%autoreload` extension, [guide](https://ipython.readthedocs.io/en/stable/config/extensions/autoreload.html), 
+
+need to load (once) the `%autoreload` extension, [guide](https://ipython.readthedocs.io/en/stable/config/extensions/autoreload.html),
 
 ```Python
 %load_ext autoreload
 ```
+
 now can use `%autoreload`
+
 ```Python
 %autoreload
 %run main.py
 ```
+
 I was able to run both of these lines together in the VSCode terminal by using **Ctrl+o** in the terminal to have multiple lines of input.
 
 This will have the same effect as clicking **Run** within Spyder on whatever Python file Spyder has open. This also has the benefit of seeing changes to the code while still in IPython, which is not working when using the "import main" approach.
@@ -448,22 +460,29 @@ Poetry also does a similar thin? [webpage](https://python-poetry.org/) Sounds li
 What the heck is a wheel?
 
 ## Plotting
+
 I can plot out-of-the box to a pop-up window in VSCode if I use Run, but if I use ipython to run the code, I can't seem to be able to get the plots.
 
 ## Pandas
+
 [df.apply()](https://www.geeksforgeeks.org/apply-function-to-every-row-in-a-pandas-dataframe/)
 
 ### `SettingWithCopyWarning`
+
 [Guide](https://realpython.com/pandas-settingwithcopywarning/), simple explanation on how to deal with this. First line of defence: use `.loc` and `.iloc`
+
 ```Python
 df.loc[idx_label, col_label] = some_new_value
 ```
+
 I think `idx_label` then just needs to be an element found within `df.index()`.
 
 Alternatively, you could use a mask. By example:
+
 ```Python
 mask = df[column_label]==some_value
 ```
+
 This returns a mask of boolean values to pick out rows. Now use this mask instead of `idx_label`
 
 ```Python
@@ -471,18 +490,22 @@ df.loc[mask, col_label] = some_new_value
 ```
 
 ## SciKit-Learn
+
 Want to be able to use sklearn without having to switch back and forth between numpy arrays and dataframes. Use [sklearn-pandas](https://github.com/scikit-learn-contrib/sklearn-pandas). I have successfully used this in `make_features.py` within the `dsc_roadmap` project; import `DataFrameMapper` and use it in conjunction with the sklearn `SimpleImputer`.
 
 ## Experimental Setup
+
 [Guide](https://hydra.cc/docs/intro/) into how to use Hydra to help run experiments using Python.
 [Video](https://youtu.be/tEsPyYnzt8s) intro
 [Video](https://www.youtube.com/watch?v=bNGu8A6F3-8), mentions integration with mlflow around 20min mark, talks about parallelization (26min mark)
 [Video](https://www.youtube.com/watch?v=3gk9CvMOdzE) for hydra-zen
 
 ## Model based testing
+
 There is the `hypothesis` python package. [Docs](https://hypothesis.readthedocs.io/en/latest/), [demonstration](https://youtu.be/-S3BFkNn0rQ)
 
 # LaTeX
+
 To work on a `.tex` document, first install [LaTeX](https://miktex.org/download) and then install an editor, I prefer [TexMaker](https://www.xm1math.net/texmaker/)
 
 ```TeX
