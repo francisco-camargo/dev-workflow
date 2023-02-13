@@ -380,6 +380,28 @@ To install libraries, use
 To deactivate an active environment, use
 `deactivate`
 
+## Importing local code from other directories
+Assume you have the following folder structure:
+```shell
+parent
+	scriptE.py
+	folder1
+		scriptA.py
+		scriptB.py
+		folder3
+			scriptF.py
+	folder2
+		scriptC.py
+		scriptD.py
+```
+
+If you are in `scriptA.py` and
+* want `scriptB.py`, use `import scriptB`
+* want `scriptF.py`, use `import folder3.scriptF`
+* want `scriptE.py`, you _must_ use the `from` syntax; `from ..scriptE.py import *`
+* want `scriptC.py`, use `from ..folder2.scriptC`
+Note that this was tested using VSCode. 
+
 ## Code Format
 
 guide for using `black` and `flake8` and `isort` in a `pyproject.toml`, also talks about using a `.pre-commit-config.yaml` file.
