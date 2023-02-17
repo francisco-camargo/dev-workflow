@@ -137,6 +137,14 @@ For the password use a personal access token (PAT). It seems that in order to ma
 
 <img src="image/README/1670732984366.png" width="500">
 
+## (Optional) BitBucket credentials
+
+Using a personal BitBucket account use the Username found within the "Account Settings" page of BitBucket, found within the "Personal settings" page which can be accessed by clicking on the profile icon in the top left.
+
+![1676672322635](image/README/1676672322635.png)
+
+For the password, use an [App password](https://support.atlassian.com/bitbucket-cloud/docs/create-an-app-password/) which you can do from the "App passwords" page within "Personal settings".
+
 ## git credentials
 
 [Guide](https://support.atlassian.com/bitbucket-cloud/docs/configure-your-dvcs-username-for-commits/) on `git` credentials
@@ -381,7 +389,9 @@ To deactivate an active environment, use
 `deactivate`
 
 ## Importing local code from other directories
+
 Assume you have the following folder structure:
+
 ```shell
 parent
 	scriptE.py
@@ -396,11 +406,12 @@ parent
 ```
 
 If you are in `scriptA.py` and
+
 * want `scriptB.py`, use `import scriptB`
 * want `scriptF.py`, use `import folder3.scriptF`
 * want `scriptE.py`, you _must_ use the `from` syntax; `from ..scriptE.py import *`
 * want `scriptC.py`, use `from ..folder2.scriptC`
-Note that this was tested using VSCode. 
+  Note that this was tested using VSCode.
 
 ## Code Format
 
