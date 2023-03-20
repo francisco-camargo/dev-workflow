@@ -528,6 +528,9 @@ df.loc[mask, col_label] = some_new_value
 
 Want to be able to use sklearn without having to switch back and forth between numpy arrays and dataframes. Use [sklearn-pandas](https://github.com/scikit-learn-contrib/sklearn-pandas). I have successfully used this in `make_features.py` within the `dsc_roadmap` project; import `DataFrameMapper` and use it in conjunction with the sklearn `SimpleImputer`.
 
+### ShuffleSplit
+[StackOverflow](https://stackoverflow.com/questions/34731421/whats-the-difference-between-kfold-and-shufflesplit-cv#:~:text=As%20your%20data%20set%20grows,ShuffleSplit%20is%20an%20attractive%20option.) on why ShuffleSplit is useful when training data grows large
+
 ## Experimental Setup
 
 [Guide](https://hydra.cc/docs/intro/) into how to use Hydra to help run experiments using Python.
