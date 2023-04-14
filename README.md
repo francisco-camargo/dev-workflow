@@ -498,7 +498,16 @@ I can plot out-of-the box to a pop-up window in VSCode if I use Run, but if I us
 
 In `./src/plotting.py` I placed sample code for a plotting function that handles the aesthetics well. It Accounts for; uncertainty bands, `.eps` formatting, size of plot for two column paper, and several other minor details.
 
+## Data Validation
+[Pydantic](https://www.youtube.com/watch?v=zN4VCb0LbQI)
+
 ## Pandas
+
+### Data Types for DataFrames
+[Guide](https://youtu.be/-tU7fuUiq7w)
+[Guide](https://towardsdatascience.com/validate-your-pandas-dataframe-with-pandera-2995910e564)
+
+### `df.apply()`
 
 [df.apply()](https://www.geeksforgeeks.org/apply-function-to-every-row-in-a-pandas-dataframe/)
 
