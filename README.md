@@ -218,6 +218,11 @@ The part I don't like about this is that I have to squash commits that are local
 
 The guide also describes how to "squash and merge" during pull requests in GitHub. I used this but I don't like it because after using this merge option the Network doesn't indicate that a merge was done: the branches in the network remain separate.
 
+# Data Versioning
+
+DVC (Data Version Control)
+Guild.ai
+
 # VSCode
 
 Using Sync via my personal GitHub account to sync my VSCode settings across machines.
