@@ -64,6 +64,9 @@ PyTorch
 * DBeaver
 * DataGrip
 
+# Terminal
+To print out a tree view of the current directory use the `tree` command
+
 # Markdown
 
 Formatting code block [guide](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks), [list ](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)of available tags
