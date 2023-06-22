@@ -448,10 +448,12 @@ This worked right away. However I'm not a fan of using double-quotes instead of 
 
 ## Running Python code in VSCode
 
-There are several ways to run Python code in VSCode
+To use the IPython terminal, install IPython
+```bash
+pip install ipython
+```
 
-I am trying to figure out how to have the terminal behave like the Spyder terminal, this is what I have so far:
-In the VSCode terminal run
+Then in the VSCode terminal run
 
 ```bash
 ipython
