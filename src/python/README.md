@@ -13,11 +13,8 @@ During installation, be sure to add Python to PATH:
 Check the version of Python. Note that it can have different aliases, e.g. `python`, `py`, `python3` etc.
 
 ```bash
-
 python--version
-
 >>> Python3.11.0
-
 ```
 
 If you use VSCode, be sure that the desired Python Interpreter is used: from the Command Pallette search for `Python: Select Interpreter`. Can check the bottom right of the window:
@@ -61,27 +58,16 @@ To deactivate an active environment, use
 Assume you have the following folder structure:
 
 ```shell
-
 parent
-
   scriptE.py
-
   folder1
-
     scriptA.py
-
     scriptB.py
-
     folder3
-
       scriptF.py
-
   folder2
-
     scriptC.py
-
     scriptD.py
-
 ```
 
 If you are in `scriptA.py` and
@@ -106,12 +92,10 @@ Gonna go with `black`, [guide](https://black.readthedocs.io/en/stable/getting_st
 Run `black` by running
 
 ```bash
-
-black{source_file_or_directory}...
-
+black <source_file_or_directory>
 ```
 
-This worked right away. However I'm not a fan of using double-quotes instead of single quotes, so one option is to pass `--skip-string-normalization` in the command line or to insert it into the settings, [guide](https://sbarnea.com/lint/black/)
+This worked right away. However I'm not a fan of using double-quotes instead of single quotes, so one option is to pass `--skip-string-normalization` in the command line or to insert it into the settings, [guide](https://sbarnea.com/lint/black/). `-S` for short
 
 * linting
 * flake8
@@ -127,35 +111,26 @@ This worked right away. However I'm not a fan of using double-quotes instead of 
 To use the IPython terminal, install IPython
 
 ```bash
-
-pipinstallipython
-
+pip install ipython
 ```
 
 Then in the VSCode terminal run
 
 ```bash
-
 ipython
-
 ```
 
 need to load (once) the `%autoreload` extension, [guide](https://ipython.readthedocs.io/en/stable/config/extensions/autoreload.html),
 
 ```Python
-
 %load_ext autoreload
-
 ```
 
 now can use `%autoreload`
 
 ```Python
-
 %autoreload
-
 %run main.py
-
 ```
 
 I was able to run both of these lines together in the VSCode terminal by using **Ctrl+o** in the terminal to have multiple lines of input.
@@ -165,9 +140,7 @@ This will have the same effect as clicking **Run** within Spyder on whatever Pyt
 (old) and then within the IPython terminal that has now been instantiated, import the module you want to use
 
 ```Python
-
 import main; main.main()
-
 ```
 
 ## Using `setup.py`
@@ -217,9 +190,7 @@ In `./src/plotting.py` I placed sample code for a plotting function that handles
 [Guide](https://realpython.com/pandas-settingwithcopywarning/), simple explanation on how to deal with this. First line of defence: use `.loc` and `.iloc`
 
 ```Python
-
 df.loc[idx_label, col_label] = some_new_value
-
 ```
 
 I think `idx_label` then just needs to be an element found within `df.index()`.
@@ -227,17 +198,13 @@ I think `idx_label` then just needs to be an element found within `df.index()`.
 Alternatively, you could use a mask. By example:
 
 ```Python
-
 mask = df[column_label]==some_value
-
 ```
 
 This returns a mask of boolean values to pick out rows. Now use this mask instead of `idx_label`
 
 ```Python
-
 df.loc[mask, col_label] = some_new_value
-
 ```
 
 ## SciKit-Learn
