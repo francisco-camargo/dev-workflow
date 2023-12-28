@@ -19,13 +19,13 @@ For the password use a personal access token (PAT). It seems that in order to ma
 
 [Guide](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) on how to create a PAT. At the top of the guide there are some valuable warnings, including one on using encrypted secrets; not storing sensitive info in repos.
 
-<img src="image/README/1670732984366.png" width="500">
+<img src="../../image/README/1670732984366.png" width="500">
 
 ## (Optional) BitBucket credentials
 
 Using a personal BitBucket account use the Username found within the "Account Settings" page of BitBucket, found within the "Personal settings" page which can be accessed by clicking on the profile icon in the top left.
 
-![1676672322635](image/README/1676672322635.png)
+![1676672322635](../../image/README/1676672322635.png)
 
 For the password, use an [App password](https://support.atlassian.com/bitbucket-cloud/docs/create-an-app-password/) which you can do from the "App passwords" page within "Personal settings".
 
@@ -49,7 +49,7 @@ git config --global user.email "email@email.com"
 
 when I do `git push` on a new machine I get the following pop-up:
 
-<img src="image/README/1670731520949_b.png" width="350">
+<img src="../../image/README/1670731520949_b.png" width="350">
 
 I tried using my noreply email and PAT, but that did not work and instead the CLI prompted me to enter my username. I used my noreply email and got a pop-up asking for my password. I used a new PAT (created in the moment for the machine I am using), and I was able to successfully push to the remote repo.
 

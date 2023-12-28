@@ -39,7 +39,7 @@ Open up the command pallette (**Ctrl+Shift+p**) and then choose from:
 * `Preferences: Open Settings (UI)`
   * To then open up `settings.json` look for the `Open Settings (JSON)` button in the top right:
 
-![1670895956782](image/README/1670895956782.png)
+![1670895956782](../../image/README/1670895956782.png)
 
 ## VSCode Shortcuts
 
