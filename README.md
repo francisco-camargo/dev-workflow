@@ -50,3 +50,14 @@ Guild.ai
 
 # Testing
 [link](src/testing/README.md)
+
+# Docker
+* [docker-hello-world](https://github.com/francisco-camargo/docker-hello-world.git)
+* [docker-build-images](https://github.com/francisco-camargo/docker-build-images)
+* [vidly](https://github.com/francisco-camargo/vidly)
+* [sample-db-with-docker](https://github.com/francisco-camargo/sample-db-with-docker)
+
+# FastAPI
+* [crud-fastapi](https://github.com/francisco-camargo/crud-fastapi)
+* [build-deploy-fastapi-web-backend](https://github.com/francisco-camargo/build-deploy-fastapi-web-backend)
+* [fastapi-prediction-endpoint](https://github.com/francisco-camargo/fastapi-prediction-endpoint)
