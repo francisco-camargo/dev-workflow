@@ -1,5 +1,6 @@
 LaTeX
 =====
+
 [Return to top README.md](../../README.md)
 
 To work on a `.tex` document, first install [LaTeX](https://miktex.org/download) and then install an editor, I prefer [TexMaker](https://www.xm1math.net/texmaker/)

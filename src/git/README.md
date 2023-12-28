@@ -1,0 +1,103 @@
+git
+===
+
+[Return to top README.md](../../README.md)
+
+I'm going to assume that you first create a repo in a remote location, and never create one locally. Assume the repo is made, the first task is thus to be able to clone it. A prerequisite to being able to clone is to have your credentials set in the local machine.
+
+To view the info of the current repo
+`cat .git/config`
+In particular, this print the url of the remote repo.
+
+## (Optional) GitHub credentials
+
+Here are the credentials I use when working with a personal GitHub repo.
+
+For the username I will use the GitHub "noreply" email (because... something about hiding my email) which can be found in personal settings on GitHub, [guide](https://stackoverflow.com/a/51097104/9205210).
+
+For the password use a personal access token (PAT). It seems that in order to make use of it I need to clone the repo using HTTPS. Will create one PAT per computer.
+
+[Guide](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) on how to create a PAT. At the top of the guide there are some valuable warnings, including one on using encrypted secrets; not storing sensitive info in repos.
+
+<img src="image/README/1670732984366.png" width="500">
+
+## (Optional) BitBucket credentials
+
+Using a personal BitBucket account use the Username found within the "Account Settings" page of BitBucket, found within the "Personal settings" page which can be accessed by clicking on the profile icon in the top left.
+
+![1676672322635](image/README/1676672322635.png)
+
+For the password, use an [App password](https://support.atlassian.com/bitbucket-cloud/docs/create-an-app-password/) which you can do from the "App passwords" page within "Personal settings".
+
+## git credentials
+
+[Guide](https://support.atlassian.com/bitbucket-cloud/docs/configure-your-dvcs-username-for-commits/) on `git` credentials
+
+To set credentials specific to the current repo:
+
+```bash
+git config user.name "name" 
+git config user.email "email@email.com"
+```
+
+To set global credentials use:
+
+```bash
+git config --global user.name "name"
+git config --global user.email "email@email.com"
+```
+
+when I do `git push` on a new machine I get the following pop-up:
+
+<img src="image/README/1670731520949_b.png" width="350">
+
+I tried using my noreply email and PAT, but that did not work and instead the CLI prompted me to enter my username. I used my noreply email and got a pop-up asking for my password. I used a new PAT (created in the moment for the machine I am using), and I was able to successfully push to the remote repo.
+
+Using this method of entering my credentials, I did not have to enter my credentials in subsequent `git push` commands!
+
+2023-01-20: made a new PAT (previous one had expired). I get to the pop-up window (seen above), and I was able to connect via a  `git bash` terminal within VSCode by loging-in with my github email (not the no-reply one) and used my new PAT as the password
+
+However if this is a problem. I don't want to have to enter my username and password (PAT) every time, so follow this [guide](https://www.freecodecamp.org/news/how-to-fix-git-always-asking-for-user-credentials/) or maybe [this](https://www.techiediaries.com/git/stop-git-always-asking-for-username-and-password-when-using-https/) guide and essentially run the following commands (at the moment, not sure that I've gotten any of this to work...):
+
+```bash
+git config --global credential.helper store
+git config --global credential.helper cache
+```
+
+## git commands
+
+### git diff
+
+View of unstaged changes
+
+```bash
+git diff [filepath]
+```
+
+View staged changes
+
+```bash
+git diff --cached [filepath]
+```
+
+### Change commit message
+
+To change the message of the last commit
+
+```bash
+git commit --amend
+```
+
+### git squash
+
+[Guide](https://www.git-tower.com/learn/git/faq/git-squash) to using `rebase` to squash commits together. With several commits made, we can combine them into a single commit using `rebase`. For example, let's squash together the last 3 commits by running
+
+```bash
+git rebase -i HEAD~3
+```
+
+This will bring up a text editor where we choose what to do with the last 3 commits. In this case we want to `pick` or `p` the oldest commit (which will be the top one) and `squash` or `s` all the rest. Once we save this, we will be asked to provide a comment for the new commit. The text that given to start with will contain all the comments from the commits that are getting combined. Whatever remains as uncommented will be used as the commit message.
+
+The part I don't like about this is that I have to squash commits that are local, if any of the squash commits have been pushed  to the remote repo, this won't work. If there was a way to squash commits in the remote repo I'd be able to totally clean things up, but then again, it may be for the best that the history in the remote repo can't so easily be rewritten.
+
+The guide also describes how to "squash and merge" during pull requests in GitHub. I used this but I don't like it because after using this merge option the Network doesn't indicate that a merge was done: the branches in the network remain separate.
