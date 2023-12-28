@@ -562,20 +562,7 @@ Want to be able to use sklearn without having to switch back and forth between n
 There is the `hypothesis` python package. [Docs](https://hypothesis.readthedocs.io/en/latest/), [demonstration](https://youtu.be/-S3BFkNn0rQ)
 
 # LaTeX
-
-To work on a `.tex` document, first install [LaTeX](https://miktex.org/download) and then install an editor, I prefer [TexMaker](https://www.xm1math.net/texmaker/)
-
-```TeX
-$y=mx+b$
-```
-
-$y=mx+b$
-
-## Bibliography
-
-Add the new citation to the `.bib` file.
-
-If you don't see the bibliography right away when you compile the document, run "Quick Build" a couple times, followed by "BibTeX" mode once, followed by "Quick Build" mode one or two more times.
+[latex](src/latex/README.md)
 
 # (Optional) Using WSL
 
