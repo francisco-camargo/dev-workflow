@@ -3,6 +3,7 @@ Markdown
 
 [Return to top README.md](../../README.md)
 
+# Code Blocks
 Formatting code block [guide](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks), [list ](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)of available tags
 
 Some useful tags:
@@ -50,6 +51,13 @@ Some useful tags:
 * YAML 
 -->
 
-### YAML Header
+# LaTeX equation formatting for Markdown
+In a Markdown file, the following syntax
+```TeX
+$y=mx+b$
+```
+displays as
+$y=mx+b$
 
+# YAML Header
 [Guide](https://zsmith27.github.io/rmarkdown_crash-course/lesson-4-yaml-headers.html)

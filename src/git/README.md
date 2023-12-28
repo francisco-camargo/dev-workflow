@@ -3,14 +3,27 @@ git
 
 [Return to top README.md](../../README.md)
 
-I'm going to assume that you first create a repo in a remote location, and never create one locally. Assume the repo is made, the first task is thus to be able to clone it. A prerequisite to being able to clone is to have your credentials set in the local machine.
-
-To view the info of the current repo
+To view the remote repo URL, run
 `cat .git/config`
-In particular, this print the url of the remote repo.
 
-## (Optional) GitHub credentials
+# git credentials
+[Guide](https://support.atlassian.com/bitbucket-cloud/docs/configure-your-dvcs-username-for-commits/) on `git` credentials
 
+To set credentials specific to the current repo, run
+
+```bash
+git config user.name "name" 
+git config user.email "email@email.com"
+```
+
+To set global credentials, run
+
+```bash
+git config --global user.name "name"
+git config --global user.email "email@email.com"
+```
+
+## GitHub Credentials
 Here are the credentials I use when working with a personal GitHub repo.
 
 For the username I will use the GitHub "noreply" email (because... something about hiding my email) which can be found in personal settings on GitHub, [guide](https://stackoverflow.com/a/51097104/9205210).
@@ -21,33 +34,8 @@ For the password use a personal access token (PAT). It seems that in order to ma
 
 <img src="../../image/README/1670732984366.png" width="500">
 
-## (Optional) BitBucket credentials
-
-Using a personal BitBucket account use the Username found within the "Account Settings" page of BitBucket, found within the "Personal settings" page which can be accessed by clicking on the profile icon in the top left.
-
-![1676672322635](../../image/README/1676672322635.png)
-
-For the password, use an [App password](https://support.atlassian.com/bitbucket-cloud/docs/create-an-app-password/) which you can do from the "App passwords" page within "Personal settings".
-
-## git credentials
-
-[Guide](https://support.atlassian.com/bitbucket-cloud/docs/configure-your-dvcs-username-for-commits/) on `git` credentials
-
-To set credentials specific to the current repo:
-
-```bash
-git config user.name "name" 
-git config user.email "email@email.com"
-```
-
-To set global credentials use:
-
-```bash
-git config --global user.name "name"
-git config --global user.email "email@email.com"
-```
-
-when I do `git push` on a new machine I get the following pop-up:
+### Trying it
+When I do `git push` on a new machine I get the following pop-up:
 
 <img src="../../image/README/1670731520949_b.png" width="350">
 
@@ -64,9 +52,17 @@ git config --global credential.helper store
 git config --global credential.helper cache
 ```
 
-## git commands
+## BitBucket Credentials
 
-### git diff
+Using a personal BitBucket account use the Username found within the "Account Settings" page of BitBucket, found within the "Personal settings" page which can be accessed by clicking on the profile icon in the top left.
+
+![1676672322635](../../image/README/1676672322635.png)
+
+For the password, use an [App password](https://support.atlassian.com/bitbucket-cloud/docs/create-an-app-password/) which you can do from the "App passwords" page within "Personal settings".
+
+# git commands
+
+## git diff
 
 View of unstaged changes
 
@@ -80,7 +76,7 @@ View staged changes
 git diff --cached [filepath]
 ```
 
-### Change commit message
+## Change commit message
 
 To change the message of the last commit
 
@@ -88,7 +84,7 @@ To change the message of the last commit
 git commit --amend
 ```
 
-### git squash
+## git squash
 
 [Guide](https://www.git-tower.com/learn/git/faq/git-squash) to using `rebase` to squash commits together. With several commits made, we can combine them into a single commit using `rebase`. For example, let's squash together the last 3 commits by running
 

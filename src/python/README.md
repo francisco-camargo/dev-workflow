@@ -1,8 +1,9 @@
-# Python
+Python
+======
 
 [Return to top README.md](../../README.md)
 
-## Install Python on Windows
+# Install Python on Windows
 
 [Link](https://www.python.org/downloads/) to download Python.
 
@@ -13,7 +14,7 @@ During installation, be sure to add Python to PATH:
 Check the version of Python. Note that it can have different aliases, e.g. `python`, `py`, `python3` etc.
 
 ```bash
-python--version
+python --version
 >>> Python3.11.0
 ```
 
@@ -21,7 +22,7 @@ If you use VSCode, be sure that the desired Python Interpreter is used: from the
 
 ![1670921755378](../../image/README/1670921755378.png)
 
-## Install Python on Ubuntu
+# Install Python on Ubuntu
 
 We do want to install python within WSL: [guide](https://computingforgeeks.com/how-to-install-python-on-ubuntu-linux-system/)
 
@@ -29,7 +30,7 @@ give an [alias](https://askubuntu.com/questions/320996/how-to-make-python-progra
 
 `alias python = python3.10`
 
-## Python Code Environment
+# Python Code Environment
 
 Download and install Python from [link](https://www.python.org/downloads/)
 
@@ -53,7 +54,7 @@ To deactivate an active environment, use
 
 `deactivate`
 
-## Importing local code from other directories
+# Importing local code from other directories
 
 Assume you have the following folder structure:
 
@@ -79,7 +80,7 @@ If you are in `scriptA.py` and
 
   Note that this was tested using VSCode.
 
-## Code Format
+# Code Format
 
 guide for using `black` and `flake8` and `isort` in a `pyproject.toml`, also talks about using a `.pre-commit-config.yaml` file.
 
@@ -100,13 +101,13 @@ This worked right away. However I'm not a fan of using double-quotes instead of 
 * linting
 * flake8
 
-## docstrings
+# docstrings
 
 [guide](https://www.programiz.com/python-programming/docstrings)
 
 [guide](https://stackoverflow.com/questions/3898572/what-are-the-most-common-python-docstring-formats) to popular docstring formats
 
-## Running Python code in VSCode
+# Running Python code in VSCode
 
 To use the IPython terminal, install IPython
 
@@ -143,13 +144,13 @@ This will have the same effect as clicking **Run** within Spyder on whatever Pyt
 import main; main.main()
 ```
 
-## Using `setup.py`
+# `pyproject.toml`
 
 The [documentation](https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html) for `black` suggests that we can use a `pyproject.toml` file to replace both `setup.py` and `setup.cfg` files.
 
 ![1670897817471](../../image/README/1670897817471.png)
 
-## Packaging
+# Packaging
 
 Learn how to package code, there are several options, so first want to just look at all of them before picking one to run with
 
@@ -163,29 +164,29 @@ Poetry also does a similar thin? There may be some [serious problems](https://ww
 
 What the heck is a wheel?
 
-## Plotting
+# Plotting
 
 I can plot out-of-the box to a pop-up window in VSCode if I use Run, but if I use ipython to run the code, I can't seem to be able to get the plots.
 
 In `./src/plotting.py` I placed sample code for a plotting function that handles the aesthetics well. It Accounts for; uncertainty bands, `.eps` formatting, size of plot for two column paper, and several other minor details.
 
-## Data Validation
+# Data Validation
 
 [Pydantic](https://www.youtube.com/watch?v=zN4VCb0LbQI)
 
-## Pandas
+# Pandas
 
-### Data Types for DataFrames
+## Data Types for DataFrames
 
 [Guide](https://youtu.be/-tU7fuUiq7w)
 
 [Guide](https://towardsdatascience.com/validate-your-pandas-dataframe-with-pandera-2995910e564)
 
-### `df.apply()`
+## `df.apply()`
 
 [df.apply()](https://www.geeksforgeeks.org/apply-function-to-every-row-in-a-pandas-dataframe/)
 
-### `SettingWithCopyWarning`
+## `SettingWithCopyWarning`
 
 [Guide](https://realpython.com/pandas-settingwithcopywarning/), simple explanation on how to deal with this. First line of defence: use `.loc` and `.iloc`
 
@@ -207,24 +208,24 @@ This returns a mask of boolean values to pick out rows. Now use this mask instea
 df.loc[mask, col_label] = some_new_value
 ```
 
-## SciKit-Learn
+# SciKit-Learn
 
 Want to be able to use sklearn without having to switch back and forth between numpy arrays and dataframes. Use [sklearn-pandas](https://github.com/scikit-learn-contrib/sklearn-pandas). I have successfully used this in `make_features.py` within the `dsc_roadmap` project; import `DataFrameMapper` and use it in conjunction with the sklearn `SimpleImputer`.
 
-### ShuffleSplit
+## ShuffleSplit
 
-[StackOverflow](https://stackoverflow.com/questions/34731421/whats-the-difference-between-kfold-and-shufflesplit-cv#:~:text=As%20your%20data%20set%20grows,ShuffleSplit%20is%20an%20attractive%20option.) on why ShuffleSplit is useful when training data grows large
+[StackOverflow](https://stackoverflow.com/questions/34731421/whats-the-difference-between-kfold-and-shufflesplit-cv#:~:text=As%20your%20data%20set%20grows,ShuffleSplit%20is%20an%20attractive%20option.) on why ShuffleSplit is useful as training data size grows
 
-## Experimental Setup
+# Experimental Setup
 
 [Guide](https://hydra.cc/docs/intro/) into how to use Hydra to help run experiments using Python.
 
 [Video](https://youtu.be/tEsPyYnzt8s) intro
 
-[Video](https://www.youtube.com/watch?v=bNGu8A6F3-8), mentions integration with mlflow around 20min mark, talks about parallelization (26min mark)
+[Video](https://www.youtube.com/watch?v=bNGu8A6F3-8) mentions integration with mlflow around 20min mark, talks about parallelization (26min mark)
 
 [Video](https://www.youtube.com/watch?v=3gk9CvMOdzE) for hydra-zen
 
-## Model based testing
+# Model based testing
 
 There is the `hypothesis` python package. [Docs](https://hypothesis.readthedocs.io/en/latest/), [demonstration](https://youtu.be/-S3BFkNn0rQ)
