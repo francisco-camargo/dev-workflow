@@ -98,8 +98,26 @@ black <source_file_or_directory>
 
 This worked right away. However I'm not a fan of using double-quotes instead of single quotes, so one option is to pass `--skip-string-normalization` in the command line or to insert it into the settings, [guide](https://sbarnea.com/lint/black/). `-S` for short
 
-* linting
-* flake8
+`flake8` [guide](https://michaelcurrin.github.io/dev-cheatsheets/cheatsheets/python/linting/flake8.html)
+
+Run `flake8` by running
+
+```bash
+flake8
+```
+
+Configure how flake8 runs by having a `setup.cfg` file, for example,
+
+```ini
+[flake8]
+exclude = 
+    .git,
+    __pycache__,
+    env,
+max-line-length = 88
+```
+
+This prevents `flake8` from looking at files we are not interested in adding to a code repo. This also changes the maximum line length to align with `black`
 
 # docstrings
 
