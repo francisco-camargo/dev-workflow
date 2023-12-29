@@ -18,7 +18,7 @@ Francisco Camargo
   * [sample-db-with-docker](https://github.com/francisco-camargo/sample-db-with-docker)
 * [Vim](src/vim/README.md)
 * [Python](src/python/README.md)
-  * FastAPI
+  * [FastAPI](src/python/fastapi/README.md)
     * [crud-fastapi](https://github.com/francisco-camargo/crud-fastapi)
     * [build-deploy-fastapi-web-backend](https://github.com/francisco-camargo/build-deploy-fastapi-web-backend)
     * [fastapi-prediction-endpoint](https://github.com/francisco-camargo/fastapi-prediction-endpoint)
