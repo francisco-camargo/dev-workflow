@@ -1,7 +1,7 @@
 AWS CLI
 =======
 
-[Return to top README.md](../../README.md)
+[Return to top README.md](../../../README.md)
 
 # Docker Image
 
