@@ -6,12 +6,15 @@ Development Workflow
 Francisco Camargo
 
 # Table of Contents
+
 * [git](src/git/README.md)
 * [Markdown](src/markdown/README.md)
 * [LaTeX](src/latex/README.md)
 * [Linux](src/linux/README.md)
 * [VSCode](src/vscode/README.md)
 * [Vim](src/vim/README.md)
+* Project template
+  * [Cookiecutter and Makefile](https://www.ianwootten.co.uk/2021/01/07/bootstrapping-python-projects-with-cookiecutter-and-makefiles/)
 * Docker
   * [docker-hello-world](https://github.com/francisco-camargo/docker-hello-world.git)
   * [docker-build-images](https://github.com/francisco-camargo/docker-build-images)
@@ -29,3 +32,4 @@ Francisco Camargo
 * Data Versioning
   * DVC (Data Version Control)
   * Guild.ai
+* [AWS](src/aws/aws_cli/README.md)
