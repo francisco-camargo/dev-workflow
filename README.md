@@ -15,12 +15,18 @@ Francisco Camargo
 * [Vim](src/vim/README.md)
 * Project template
   * [Cookiecutter and Makefile](https://www.ianwootten.co.uk/2021/01/07/bootstrapping-python-projects-with-cookiecutter-and-makefiles/)
+  * `pre-commit install`
+  * set up `venv` and install packages
+  * `.gitignore`
+  * `.gitconfig`
+  * `README.md`
 * Docker
   * [docker-hello-world](https://github.com/francisco-camargo/docker-hello-world.git)
   * [docker-build-images](https://github.com/francisco-camargo/docker-build-images)
   * [vidly](https://github.com/francisco-camargo/vidly)
   * [sample-db-with-docker](https://github.com/francisco-camargo/sample-db-with-docker)
 * [Python](src/python/README.md)
+  * [pre-commit](src/python/pre-commit/README.md)
   * [FastAPI](src/python/fastapi/README.md)
     * [crud-fastapi](https://github.com/francisco-camargo/crud-fastapi)
     * [build-deploy-fastapi-web-backend](https://github.com/francisco-camargo/build-deploy-fastapi-web-backend)
