@@ -32,4 +32,6 @@ Francisco Camargo
 * Data Versioning
   * DVC (Data Version Control)
   * Guild.ai
-* [AWS](src/aws/aws_cli/README.md)
+* Cloud
+  * [Terraform](src/terraform/README.md)
+  * [AWS](src/aws/aws_cli/README.md)
