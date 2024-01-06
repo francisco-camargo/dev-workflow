@@ -56,6 +56,8 @@ To deactivate an active environment, use
 
 # Importing local code from other directories
 
+Good [write-up](https://stackoverflow.com/questions/14132789/relative-imports-for-the-billionth-time). I current understanding is that Whatever script is `__main__`, it will not be able to utilize relative imports.
+
 Assume you have the following folder structure:
 
 ```shell
@@ -75,7 +77,7 @@ If you are in `scriptA.py` and
 
 * want `scriptB.py`, use `import scriptB`
 * want `scriptF.py`, use `import folder3.scriptF`
-* want `scriptE.py`, you _must_ use the `from` syntax; `from ..scriptE.py import *`
+* want `scriptE.py`, you _must_ use the `from` syntax; `from ..scriptE import *`
 * want `scriptC.py`, use `from ..folder2.scriptC`
 
   Note that this was tested using VSCode.
