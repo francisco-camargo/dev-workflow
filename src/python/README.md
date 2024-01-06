@@ -80,7 +80,15 @@ If you are in `scriptA.py` and
 * want `scriptE.py`, you _must_ use the `from` syntax; `from ..scriptE import *`
 * want `scriptC.py`, use `from ..folder2.scriptC`
 
-  Note that this was tested using VSCode.
+Here are some useful commands to help debug some of this
+```python
+    import sys 
+    print(f'system path: {sys.path}')
+    import os
+    print(f'current working dir (cwd): {os.getcwd()}')
+    print(f'ls within cwd: {os.listdir('./')}')
+    print(f'ls within ../cwd: {os.listdir('../')}')
+```
 
 # Code Format
 
