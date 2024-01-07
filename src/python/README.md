@@ -42,6 +42,8 @@ To activate environment, use
 
 `env/Scripts/activate`
 
+In `git bash` may have to use `. env/Scripts/activate`
+
 To update `pip`, use
 
 `python -m pip install --upgrade pip`
@@ -81,8 +83,9 @@ If you are in `scriptA.py` and
 * want `scriptC.py`, use `from ..folder2.scriptC`
 
 Here are some useful commands to help debug some of this
+
 ```python
-    import sys 
+    import sys
     print(f'system path: {sys.path}')
     import os
     print(f'current working dir (cwd): {os.getcwd()}')
@@ -120,7 +123,7 @@ Configure how flake8 runs by having a `setup.cfg` file, for example,
 
 ```ini
 [flake8]
-exclude = 
+exclude =
     .git,
     __pycache__,
     env,

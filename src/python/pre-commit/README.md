@@ -14,7 +14,6 @@ pip install pre-commit
 validate with
 
 ```
-bash
 pre-commit --version
 ```
 
