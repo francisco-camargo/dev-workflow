@@ -13,7 +13,7 @@ pip install pre-commit
 
 validate with
 
-```
+```bash
 pre-commit --version
 ```
 
@@ -62,3 +62,48 @@ It is possible, though [not recommended](https://github.com/pre-commit/pre-commi
 [link](https://towardsdatascience.com/4-pre-commit-plugins-to-automate-code-reviewing-and-formatting-in-python-c80c6d2e9f5)
 
 Added a sample `.pre-commit-config.yaml` to under the parent directory
+
+# Code Format (old)
+
+guide for using `black` and `flake8` and `isort` in a `pyproject.toml`, also talks about using a `.pre-commit-config.yaml` file.
+
+`black` [guide](https://medium.com/@josephlyu.sj/python-auto-formatter-autopep8-vs-black-and-some-practical-tips-e71adb24aee1)
+
+Code formatting shortcut in VSCode **Alt+Shift+f** or look for `Format Document` in the command pallette
+
+Gonna go with `black`, [guide](https://black.readthedocs.io/en/stable/getting_started.html). Add it to `requirements.txt`
+
+Run `black` by running
+
+```bash
+black <source_file_or_directory>
+```
+
+This worked right away. However I'm not a fan of using double-quotes instead of single quotes, so one option is to pass `--skip-string-normalization` in the command line or to insert it into the settings, [guide](https://sbarnea.com/lint/black/). `-S` for short
+
+`flake8` [guide](https://michaelcurrin.github.io/dev-cheatsheets/cheatsheets/python/linting/flake8.html)
+
+Run `flake8` by running
+
+```bash
+flake8
+```
+
+Configure how flake8 runs by having a `setup.cfg` file, for example,
+
+```ini
+[flake8]
+exclude =
+    .git,
+    __pycache__,
+    env,
+max-line-length = 88
+```
+
+This prevents `flake8` from looking at files we are not interested in adding to a code repo. This also changes the maximum line length to align with `black`
+
+# docstrings
+
+[guide](https://www.programiz.com/python-programming/docstrings)
+
+[guide](https://stackoverflow.com/questions/3898572/what-are-the-most-common-python-docstring-formats) to popular docstring formats
