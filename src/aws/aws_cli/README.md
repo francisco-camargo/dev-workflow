@@ -123,6 +123,8 @@ which I think uses the default AWS config profile, so just means that the defaul
 
 When accessing resources via `boto3`, credentials are needed. [Here](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html) is how `boto3` determines which credentials profile is used. [Here ](https://stackoverflow.com/questions/33378422/how-to-choose-an-aws-profile-when-using-boto3-to-connect-to-cloudfront)are some code examples of setting the profile, note that some of these answers have outdated syntax.
 
+2024-01-12 I onboarded someone to AWS and they were able to use `boto3` to pull data from S3 without having to set up credentials. I suspect it depends on how the AWS account was set up.
+
 # Summary
 
 Currently I have three places of interest where a "profile" needs to be specified.
