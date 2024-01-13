@@ -55,6 +55,10 @@ The versions of each repo used for a hook must be stated explicitly within `.pre
 pre-commit autoupdate
 ```
 
+# `mypy`
+
+[Cheat sheet](https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html) for `mypy`
+
 # pre-commit PyTest
 
 It is possible, though [not recommended](https://github.com/pre-commit/pre-commit/issues/761#issuecomment-394167542), to run PyTest as a pre-commit hook.
