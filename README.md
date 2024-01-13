@@ -26,6 +26,7 @@ Francisco Camargo
   * [vidly](https://github.com/francisco-camargo/vidly)
   * [sample-db-with-docker](https://github.com/francisco-camargo/sample-db-with-docker)
 * [Python](src/python/README.md)
+  * [testing](src/python/testing/README.md)
   * [pre-commit](src/python/pre-commit/README.md)
   * [FastAPI](src/python/fastapi/README.md)
     * [crud-fastapi](https://github.com/francisco-camargo/crud-fastapi)

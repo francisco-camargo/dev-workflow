@@ -61,7 +61,7 @@ pre-commit autoupdate
 
 # pre-commit PyTest
 
-It is possible, though [not recommended](https://github.com/pre-commit/pre-commit/issues/761#issuecomment-394167542), to run PyTest as a pre-commit hook.
+It is possible, though [not recommended](https://github.com/pre-commit/pre-commit/issues/761#issuecomment-394167542), to run PyTest as a pre-commit hook. If you want to do it anyway, [here ](https://stackoverflow.com/questions/64011304/running-pytest-as-a-pre-commit-hook-no-such-file-or-directory-issue)are some example configurations.
 
 # Suggested Settings
 
