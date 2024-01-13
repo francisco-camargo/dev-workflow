@@ -45,6 +45,8 @@ This can be useful if you want to run the hooks without actually making a new `g
 
 If in the future you add more hooks to `.pre-commit-config.yaml`, you don't have to re-run `pre-commit install`.
 
+[Guide](https://stackoverflow.com/questions/61032281/exclude-some-files-on-running-black-using-pre-commit) to exclude specific folders from being checked during run of `pre-commit`
+
 # `pre-commit autoupdate`
 
 The versions of each repo used for a hook must be stated explicitly within `.pre-commit-config.yaml` which implies needing to manually update these values over time. However, you can update these values automatically by running
