@@ -7,20 +7,8 @@ Using Sync via my personal GitHub account to sync my VSCode settings across mach
 
 I use the **Dark+** color theme.
 
-# VSCode Extensions
-* Python
-* PyLance
-* Vim
-* Learn Vim
-* Typora
-  * I use the Native code block theme
-* vscode-pdf
-* Code Spell Checker
-  * While cursor is on a word of interest, hit **Ctrl+.** to show spell checking options
-* Docker
-* Remote - SSH
-
 # Open Settings
+
 Open up the command pallette (**Ctrl+Shift+p**) and then choose from:
 
 * `Preferences: Open Keyboard Shortcuts`
@@ -30,6 +18,7 @@ Open up the command pallette (**Ctrl+Shift+p**) and then choose from:
 ![1670895956782](../../image/README/1670895956782.png)
 
 # VSCode Shortcuts
+
 [Reference](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf) of VSCode shortcuts
 
 Command palette
@@ -49,9 +38,11 @@ Debug console:
 In the Settings page, look for Line Number; I like to use relative line numbers because it makes it easier to navigate with Vim.
 
 # Using VSCode Remotely
+
 [Guide](https://medium.com/@christyjacob4/using-vscode-remotely-on-an-ec2-instance-7822c4032cff)
 
 # Install VSCode for WSL
+
 [Guide](https://code.visualstudio.com/docs/remote/wsl)
 Needed to have installed VSCode in the Windows side. In the Ubuntu terminal, go to the folder in which we want to work and start-up VSCode:
 
@@ -60,3 +51,49 @@ Needed to have installed VSCode in the Windows side. In the Ubuntu terminal, go 
 There is some first-time automatic set-up but once VSCode is open, at the bottom left I see that in green it says `WSL: Ubuntu-20.04`
 
 Alternatively: To have VSCode looking at Ubuntu go to the bottom left and click on the green box then in the pop-up at the top select `New WSL Window using Distro...`. Now when we open a terminal we should see that it is a bash terminal and we have access to the python we just installed
+
+# Docker Dev Environment
+
+Open the remote VSCode window (bottom right)
+
+![1705428379359](image/README/1705428379359.png)
+
+Select to attach to running container
+
+![1705428498357](image/README/1705428498357.png)
+
+Install the `Python` VSCode extension. This will be installed in this container so as long as this container persists you won't have to reinstall this extension again. This extension will allow VSCode to find variable definitions (can use `F12`). If this does not work right away, close and re-connect VSCode.
+
+To close this instance, click the blue button in the bottom-right and select to close remote connection
+
+![1705428901931](image/README/1705428901931.png)
+
+Additionally, you may get some warnings regarding the `Python` extension, these should be resolved with restarting.
+
+Changes in this containarized instance of VSCode will be reflected in the host machine.
+
+Some [info](https://github.com/patrickloeber/python-docker-tutorial/tree/main/dev-environment#7-debug-python-code-inside-a-container) on debugging
+
+# WSL use of VSCode
+
+TLDR: I didn't love using Dev Containers, I'd rather use the methods detailed above. However, due to the delayed `--reload` (see subsection below), it's worth it to *clone the repo within WSL* and launch `docker-compose` from there, instead of directly from Windows. This will remove delay observed between making a change is made to the code and seeing the change take effect in the web application!
+
+To launch VSCode from WSL use `code .`
+
+![wsl_vscode](image/README/wsl_vscode.png)
+
+Or from within VSCode, hit the blue "Open a Remote Window" button and then select "Connect to WSL". If that doesn't work (because a docker distribtuion is set to default), try "Connect to WSL using Distro..." which will allow you to directly choose the Ubuntu distribution.
+
+![1706044631466](image/README/1706044631466.png)
+
+## Dev Containers
+
+Following [this](https://youtu.be/SDa3v4Quj7Y?si=d_Xm9Kh_TnlIWXoJ) video guide
+
+Install the Remote Development extension pack, which includes Dev Containers. Let's use the "Clone Repoository in Container Volume..." option.
+
+![1705460722378](image/README/1705460722378.png)
+
+## Delayed `--reload`
+
+I have noticed that when a change is made to the code in the host machine, it takes several seconds before the change is picked up by the containerized instance of `uvicorn` when using the `--reload` flag. [This](https://youtu.be/SDa3v4Quj7Y?si=IauV72FmPa4kyS8r&t=384) video explains a possible reason why. The solution is to clone repos directly into WSL.
