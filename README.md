@@ -41,4 +41,6 @@ Francisco Camargo
   * Guild.ai
 * Cloud
   * [Terraform](src/terraform/README.md)
-  * [AWS](src/aws/aws_cli/README.md)
+  * AWS
+    * [AWS CLI](src/aws/aws_cli/README.md)
+    * [AWS CDK](src/aws/cdk/README.md)
