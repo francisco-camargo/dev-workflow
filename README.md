@@ -11,6 +11,7 @@ Francisco Camargo
 * [Markdown](src/markdown/README.md)
 * [LaTeX](src/latex/README.md)
 * [Linux](src/linux/README.md)
+* [WSL](src/wsl/README.md)
 * [VSCode](src/vscode/README.md)
 * [Vim](src/vim/README.md)
 * Project template
