@@ -27,3 +27,6 @@ Or instead, from the terminal, run
 ```bash
 systemctl --user start docker-desktop
 ```
+
+# Sign in into Docker Desktop
+If you are unable to sign in into Docker Desktop for Linux, it may be because you much [enable `pass`](https://docs.docker.com/desktop/get-started/#signing-in-with-docker-desktop-for-linux)
