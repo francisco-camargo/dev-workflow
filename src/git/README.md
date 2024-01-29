@@ -154,3 +154,16 @@ This will bring up a text editor where we choose what to do with the last 3 comm
 The part I don't like about this is that I have to squash commits that are local, if any of the squash commits have been pushed  to the remote repo, this won't work. If there was a way to squash commits in the remote repo I'd be able to totally clean things up, but then again, it may be for the best that the history in the remote repo can't so easily be rewritten.
 
 The guide also describes how to "squash and merge" during pull requests in GitHub. I used this but I don't like it because after using this merge option the Network doesn't indicate that a merge was done: the branches in the network remain separate.
+
+## git time machine
+
+https://stackoverflow.com/questions/40253526/get-changes-from-another-branch-without-affecting-current-branch-at-all
+
+https://stackoverflow.com/questions/5340724/get-changes-from-master-into-branch-in-git
+
+https://stackoverflow.com/questions/4114095/how-do-i-revert-a-git-repository-to-a-previous-commit
+
+Create branch using old commit, [link](https://stackoverflow.com/questions/8483983/how-to-create-the-branch-from-a-specific-commit-in-a-different-branch).
+```bash
+git checkout -b <new-branch-name> <commit id>
+```

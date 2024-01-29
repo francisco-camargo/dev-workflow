@@ -45,3 +45,4 @@ Francisco Camargo
   * AWS
     * [AWS CLI](src/aws/aws_cli/README.md)
     * [AWS CDK](src/aws/cdk/README.md)
+    * [SageMaker](src/aws/sagemaker/README.md)
