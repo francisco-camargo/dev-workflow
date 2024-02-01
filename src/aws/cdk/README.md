@@ -3,9 +3,11 @@ AWS Cloud Development Kit (CDK)
 
 [Return to top README.md](../../../README.md)
 
+TODO: try to do this within a Docker Container
+
 # Install CDK
 
-TODO: try to do this within a Docker Container
+[AWS Getting Started Guide](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html)
 
 * [Option A](https://miguelacallesmba.medium.com/using-docker-for-aws-cdk-development-7054086deb3d)
 * [Option B](https://aws.plainenglish.io/run-aws-cdk-in-a-docker-container-bcb307ccf232)
