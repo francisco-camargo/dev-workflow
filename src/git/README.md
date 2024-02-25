@@ -117,6 +117,10 @@ Using a personal BitBucket account use the Username found within the "Account Se
 
 For the password, use an [App password](https://support.atlassian.com/bitbucket-cloud/docs/create-an-app-password/) which you can do from the "App passwords" page within "Personal settings".
 
+## Transfer Repo from BitBucket to GitHub
+
+[Guide](https://docs.github.com/en/migrations/importing-source-code/using-github-importer/importing-a-repository-with-github-importer) from GitHub. However, when you are asked to login with your BitBucket credentials within the GitHub website, use your BitBucket [username ](https://bitbucket.org/account/settings/)and [app-password](https://bitbucket.org/account/settings/app-passwords/), [link](https://gist.github.com/mandiwise/5954bbb2e95c011885ff?permalink_comment_id=3756611#gistcomment-3756611). [Guide ](https://support.atlassian.com/bitbucket-cloud/docs/create-an-app-password/)to generating a BitBucket app-password.
+
 # git commands
 
 ## git diff
@@ -164,6 +168,7 @@ https://stackoverflow.com/questions/5340724/get-changes-from-master-into-branch-
 https://stackoverflow.com/questions/4114095/how-do-i-revert-a-git-repository-to-a-previous-commit
 
 Create branch using old commit, [link](https://stackoverflow.com/questions/8483983/how-to-create-the-branch-from-a-specific-commit-in-a-different-branch).
+
 ```bash
 git checkout -b <new-branch-name> <commit id>
 ```
