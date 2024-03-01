@@ -7,22 +7,6 @@ Francisco Camargo
 
 # Table of Contents
 
-* Statistics
-  * [isye6644-simulation](https://github.com/francisco-camargo/isye6644-simulation)
-* Machine Learning
-  * cs7638-ai4r
-    * [p1-asteroids](https://github.com/francisco-camargo/cs7638-ai4r-p1-asteroids)
-    * [p2-marsglider](https://github.com/francisco-camargo/cs7638-ai4r-p2-marsglider)
-    * [p3-rocketpid](https://github.com/francisco-camargo/cs7638-ai4r-p3-rocketpid)
-    * [p4-warehouse](https://github.com/francisco-camargo/cs7638-ai4r-p4-warehouse)
-    * [p5-icerover](https://github.com/francisco-camargo/cs7638-ai4r-p5-icerover)
-  * [isye6501-analyticsmodeling](https://github.com/francisco-camargo/isye6501-analyticsmodeling)
-  * [cs7646-ml4t](https://github.com/francisco-camargo/cs7646-ml4t)
-  * cs7643-deep-learning
-  * [cs6515-intro-grad-algo](https://github.com/francisco-camargo/cs6515-intro-grad-algo)
-  * [cs6400-database-design-tradeplaza](https://github.com/francisco-camargo/cs6400-database-design-tradeplaza)
-  * [cs6603-ai-ethics-society](https://github.com/francisco-camargo/cs6603-ai-ethics-society)
-  * cs7641-machine-learning
 * [git](src/git/README.md)
 * [Markdown](src/markdown/README.md)
 * [LaTeX](src/latex/README.md)
