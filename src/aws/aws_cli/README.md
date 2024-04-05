@@ -105,6 +105,13 @@ After installing `git`, install `git-remote-codecommit`
 pip install git-remote-codecommit
 ```
 
+In WSL this did not work so I uninstalled and then installed with `sudo`
+
+```shell
+pip uninstall git-remote-codecommit
+sudo pip uninstall git-remote-codecommit
+```
+
 To clone from CodeCommit, be sure to have been logged into SSO and now try
 
 ```bash
