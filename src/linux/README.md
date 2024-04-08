@@ -64,7 +64,7 @@ ping google.com
 
 Terminate the command with `ctrl+c`
 
-If you do not have internet access, be sure you are on the correct network (via VPN), if needed. Alternaticly, you may need to modify the `resolv.conf` file. This [thread](https://stackoverflow.com/q/62314789/9205210) describes how to do this.
+If you do not have internet access, be sure you are on the correct network (via VPN), if needed. Alternativly, you may need to modify the `resolv.conf` file. This [thread](https://stackoverflow.com/q/62314789/9205210) describes how to do this. For some reason this gets undone on its own, so you may have to redo this again.
 
 ## Where is this repo once it is cloned?
 
