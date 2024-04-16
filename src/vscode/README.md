@@ -49,13 +49,15 @@ In the Ubuntu terminal, go to the folder in which we want to work and start-up V
 
 `code .`
 
-![wsl_vscode](https://file+.vscode-resource.vscode-cdn.net/c%3A/git/dev-workflow/src/vscode/image/README/wsl_vscode.png)
+![wsl_vscode](image/README/wsl_vscode.png)
 
 May need to be on appropriate network so may need to use VPN.
 
 There is some first-time automatic set-up but once VSCode is open, at the bottom left I see that in green it says `WSL: Ubuntu-20.04`
 
 Alternatively, from within VSCode on Windows side, hit the blue "Open a Remote Window" button and then select "Connect to WSL". If that doesn't work (because a docker distribution is set to default), try "Connect to WSL using Distro..." which will allow you to directly choose the Ubuntu distribution.
+
+If you get the error `ERROR: cannot verify update.code.visualstudio.com's certificate` when trying to open VSCode via `code .`, open VSCode from Windows and connect to WSL from inside VSCode. If that worked, close VSCode from Windows, and try to open it again from WSL via `code .`, [link](https://stackoverflow.com/a/76841961/9205210).
 
 ![1706044631466](image/README/1706044631466.png)
 
