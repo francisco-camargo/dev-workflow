@@ -172,3 +172,13 @@ Create branch using old commit, [link](https://stackoverflow.com/questions/84839
 ```bash
 git checkout -b <new-branch-name> <commit id>
 ```
+
+[View](https://stackoverflow.com/a/49838096/9205210) difference between two commits on GitHub
+```
+github.com/<username>/<repo_name>/compare/<commit1>...<commit2>
+```
+eg.
+```
+github.com/francisco-camargo/vidly/compare/04f5f58...e892d14
+```
+
