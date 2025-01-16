@@ -182,3 +182,8 @@ eg.
 github.com/francisco-camargo/vidly/compare/04f5f58...e892d14
 ```
 
+# Git End-of-Line handling
+
+By default, when commiting changes, `git` converts end-of-line characters depending on the OS. For example, if on a Windows machines, EOL will be changed to CRLF. [Here](https://betterstack.com/community/questions/git-replacing-lf-with-crlf/) is a guide on how to change this `git` setting locally.
+
+[Here](https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings) is a guide on how to make these changes stick to the repo. I have a working example of a `.gitattributes` file in this repo. [Discussion](https://stackoverflow.com/questions/73573683/editing-gitattributes-to-normalize-line-endings-doesnt-work), [docs](https://git-scm.com/docs/gitattributes), [origin of .gitattributes](https://github.com/gitattributes/gitattributes/blob/master/.gitattributes), [working with .gitignore](https://stackoverflow.com/questions/18331048/how-to-create-a-git-attributes-file).
