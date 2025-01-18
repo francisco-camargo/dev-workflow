@@ -34,3 +34,13 @@ systemctl --user start docker-desktop
 # Sign in into Docker Desktop
 
 If you are unable to sign in into Docker Desktop for Linux, it is likely because you much [enable `pass`](https://docs.docker.com/desktop/get-started/#signing-in-with-docker-desktop-for-linux)
+
+# Install `docker-compose`
+
+When trying to run `docker-compose` I was told it was not already installed even though I have installed Docker. Was given the following instructions to run
+
+```bash
+sudo snap install docker
+sudo apt install docker-compose
+```
+
