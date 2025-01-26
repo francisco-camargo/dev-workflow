@@ -1,11 +1,14 @@
 Development Workflow
 ====================
 
+***Content of this repo has moved to [francisco-camargo](https://github.com/francisco-camargo/francisco-camargo.git). This repo has been deprecated.***
+
 ***Collection of information regarding the various tools I use for code development.***
 
 Francisco Camargo
 
 # Table of Contents
+
 * [git](src/git/README.md)
 * [Markdown](src/markdown/README.md)
 * [LaTeX](src/latex/README.md)
